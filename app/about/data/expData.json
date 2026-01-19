@@ -1,0 +1,40 @@
+[
+    {
+        "id": "bangkit",
+        "name": "Bangkit",
+        "subname": "",
+        "theme": "#D02752",
+        "breakdown": [
+            {
+                "pos": "Machine Learning Cohort",
+                "skill": ["python", "tensorflow"],
+                "dateStart": "Feb 2024",
+                "dateEnd": "Jun 2024",
+                "detail": ["Studying about machine learning through online courses (Coursera)", "Made machine learning model using TensorFlow with other cohorts for the final project"]
+            }
+        ]
+    },
+    {
+        "id": "ugm",
+        "name": "Department of Mathematics UGM",
+        "subname": "",
+        "theme": "#0C2C55",
+        "skills": ["python", "latex", "figma", "inkscape"],
+        "breakdown": [
+            {
+                "pos": "Laboratory Assistant of Computational Mathematics",
+                "skill": ["python", "latex"],
+                "dateStart": "Feb 2024",
+                "dateEnd": "Jun 2024",
+                "detail": ["Preparing weekly learning module and assignment with others", "Teach and guide computational mathematics with implementation in Python language with other assistants", "Grade weekly assignments with other assistants"]
+            },
+            {
+                "pos": "Graphic Designer",
+                "skill": ["figma", "inkscape"],
+                "dateStart": "Aug 2025",
+                "dateEnd": "Oct 2025",
+                "detail": ["Responsible for some of social media designs", "Prepare and help some of department's events"]
+            }
+        ]
+    }
+]

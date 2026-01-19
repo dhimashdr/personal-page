@@ -1,0 +1,29 @@
+[
+  {
+    "id": "belajar-spectral-methods-2026",
+    "title": "Implementasi Spectral Methods pada Persamaan Diferensial",
+    "publishedAt": "2026-01-13",
+    "summary": "Mengenal dasar-dasar Spectral Methods dan mengapa metode ini sangat akurat untuk fungsi yang mulus.",
+    "category": "Mathematics",
+    "tags": ["Numerical", "Python", "UGM"],
+    "content": "Spectral methods adalah salah satu teknik dalam analisis numerik... \n\n### Mengapa Global?\nBerbeda dengan Finite Difference, metode ini menggunakan seluruh titik grid secara simultan... \n\n$$ \\frac{du}{dx} \\approx D u $$"
+  },
+  {
+    "id": "review-buku-agatha-christie",
+    "title": "Mengapa Poirot Selalu Menang?",
+    "publishedAt": "2026-01-05",
+    "summary": "Analisis mendalam mengenai metode deduksi Hercule Poirot dalam novel-novel Agatha Christie.",
+    "category": "Literature",
+    "tags": ["Mystery", "Agatha Christie", "Review"],
+    "content": "Dalam setiap kasusnya, Poirot selalu menekankan penggunaan 'sel-sel kelabu'... \n\n1. Observasi detail\n2. Psikologi pelaku\n3. Logika murni"
+  },
+  {
+    "id": "tulisan-tidak-penting-1",
+    "title": "Kontradiktif",
+    "publishedAt": "2026-01-15",
+    "summary": "Apa yang terlihat belum tentu seperti kenyataannya.",
+    "category": "Mathematics",
+    "tags": ["Numerical", "Python", "UGM"],
+    "content": "Spectral methods adalah salah satu teknik dalam analisis numerik... \n\n### Mengapa Global?\nBerbeda dengan Finite Difference, metode ini menggunakan seluruh titik grid secara simultan... \n\n$$ \\frac{du}{dx} \\approx D u $$ <Red>haha</Red>"
+  }
+]

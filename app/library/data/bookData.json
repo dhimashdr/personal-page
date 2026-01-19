@@ -1,0 +1,263 @@
+[
+    {
+    "title": "Holy Mother",
+    "dateRead": "2021-10-10",
+    "cover": "/images/books/holy-mother.jpg",
+    "author": "Akiyoshi Rikako",
+    "blurb": "Demi melindungi putrinya dari pembunuh sadis, seorang ibu rela melakukan dosa terberat dengan akhir yang mengejutkan.",
+    "pages": 288,
+    "genre": ["Mystery", "Thriller", "Psychological"],
+    "types": "Fiction",
+    "rate": 4.5,
+    "isbn":"978-602-6383-39-6",
+    "status": "Finished",
+    "review": "Ini adalah novel pertama yang saya baca, mungkin juga merupakan gerbang saya menuju novel misteri lainnya wkwkwk. Novel ini bisa saya bilang cukup unik, menceritakan mengenai pembunuhan tetapi dari sudut pandang pembunuhnya (dan *literally* dari awal kita sudah tahu siapa pembunuhnya). Hal ini menjadi semakin menarik karena ada campur tangan seseorang yang membersihkan barang bukti pembunuh di tubuh korban.\n\n<br/>Bagian yang paling saya suka dari novel ini adalah pembunuhan terakhir yang dilakukan si pembunuh, karena ini akan mengarah terkuaknya seseorang yang membersihkan barang bukti serta (bisa dibilang) double plot-twist yang cukup mengejutkan.\n\n<br/>Sedikit *disclaimer* bahwa novel ini cukup *explicit* (terdapat unsur kekerasan seksual), saya sarankan untuk berpikir dua kali jika ingin membacanya.",
+    "quote": "... di sini juga ada, seorang ibu yang rela menjadi iblis untuk putrinya."
+    },
+    {
+    "title": "Scheduled Suicide Day",
+    "dateRead": "2022-11-10",
+    "cover": "/images/books/scheduled-suicide-day.jpg",
+    "author": "Akiyoshi Rikako",
+    "blurb": "Ruri ingin bunuh diri, namun hantu memberinya waktu seminggu untuk membongkar kejahatan ibu tirinya sebelum nyawanya dicabut.",
+    "pages": 264,
+    "genre": ["Mystery", "Thriller", "Psychological"],
+    "types": "Fiction",
+    "rate": 3.5,
+    "isbn":"978-602-6383-10-5",
+    "status": "Finished"
+    },
+    {
+    "title": "Rindu",
+    "dateRead": "2025-11-08",
+    "cover": "/images/books/rindu.jpg",
+    "author": "Tere Liye",
+    "blurb": "Kisah perjalanan haji tahun 1938 yang mengupas kerinduan, kebencian, dan penerimaan masa lalu lima tokoh di atas kapal.",
+    "pages": 544,
+    "genre": ["Family", "History", "Romance"],
+    "types": "Fiction",
+    "rate": 4.5,
+    "isbn":"978-623-95545-2-1",
+    "status": "Finished"
+    },
+    {
+    "title": "The A.B.C. Murders",
+    "dateRead": "2023-08-08",
+    "cover": "/images/books/abc-murders.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Poirot menerima surat tantangan berinisial ABC sebelum pembunuhan berantai terjadi secara urut berdasarkan abjad nama dan kota.",
+    "pages": 256,
+    "genre": [
+      "Mystery",
+      "Crime",
+      "Detective"
+    ],
+    "types": "Fiction",
+    "rate": 4.5,
+    "isbn": "978-0-00-711924-0",
+    "status": "Finished"
+  },
+  {
+    "title": "And Then There Were None",
+    "dateRead": "2025-01-14",
+    "cover": "/images/books/and-then-there-were-none.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Sepuluh orang asing diundang ke pulau terpencil, lalu mati satu per satu mengikuti syair lagu anak-anak yang mengerikan.",
+    "pages": 264,
+    "genre": [
+      "Mystery",
+      "Psychological"
+    ],
+    "types": "Fiction",
+    "rate": 4.5,
+    "isbn": "978-0-06-207348-8",
+    "status": "Finished"
+  },
+  {
+    "title": "Hallowe'en Party",
+    "dateRead": "2024-10-08",
+    "cover": "/images/books/halloween-party.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Seorang gadis mengaku melihat pembunuhan saat pesta Halloween, namun kemudian ditemukan tewas tenggelam di ember berisi apel.",
+    "pages": 336,
+    "genre": [
+      "Mystery",
+      "Detective",
+      "Crime"
+    ],
+    "types": "Fiction",
+    "rate": 4,
+    "isbn": "978-0-00-711943-1",
+    "status": "Finished"
+  },
+  {
+    "title": "Death on the Nile",
+    "dateRead": "2023-05-16",
+    "cover": "/images/books/death-on-the-nile.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Liburan mewah Poirot di Mesir terusik ketika seorang pewaris kaya ditemukan tewas tertembak di atas kapal pesiar.",
+    "pages": 352,
+    "genre": [
+      "Mystery",
+      "Adventure",
+      "Detective"
+    ],
+    "types": "Fiction",
+    "rate": 4,
+    "isbn": "978-0-00-711932-5",
+    "status": "Finished"
+  },
+  {
+    "title": "Crooked House",
+    "dateRead": "2025-05-20",
+    "cover": "/images/books/crooked-house.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Kakek kaya raya diracun di rumahnya yang megah, cucu perempuannya mencurigai salah satu anggota keluarga sebagai pelaku.",
+    "pages": 224,
+    "genre": [
+      "Mystery",
+      "Family",
+      "Crime"
+    ],
+    "types": "Fiction",
+    "rate": 4,
+    "isbn": "978-0-00-711933-2",
+    "status": "Finished"
+  },
+  {
+    "title": "Towards Zero",
+    "dateRead": "2024-07-11",
+    "cover": "/images/books/towards-zero.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Inspektur Battle menyelidiki pembunuhan wanita tua di mana berbagai kejadian masa lalu bertemu di satu titik fatal.",
+    "pages": 242,
+    "genre": [
+      "Mystery",
+      "Psychological",
+      "Crime"
+    ],
+    "types": "Fiction",
+    "rate": 4,
+    "isbn": "978-0-00-711938-7",
+    "status": "Finished"
+  },
+  {
+    "title": "Laut Bercerita",
+    "dateRead": "2024-11-12",
+    "cover": "/images/books/laut-bercerita.jpg",
+    "author": "Leila S. Chudori",
+    "blurb": "Kisah pilu persahabatan dan kekejaman yang dialami para aktivis mahasiswa yang diculik dan dihilangkan paksa pada era Reformasi.",
+    "pages": 379,
+    "genre": [
+      "History",
+      "Drama",
+      "Tragedy"
+    ],
+    "types": "Fiction",
+    "rate": 4.5,
+    "isbn": "978-602-424-694-5",
+    "status": "Finished"
+  },
+  {
+    "title": "Namaku Alam",
+    "dateRead": "2025-10-10",
+    "cover": "/images/books/namaku-alam.jpg",
+    "author": "Leila S. Chudori",
+    "blurb": "Segara Alam berjuang tumbuh dewasa menanggung stigma sejarah kelam ayahnya sembari mencari jati diri dan kebenaran masa lalu.",
+    "pages": 448,
+    "genre": [
+      "History",
+      "Family",
+      "Drama"
+    ],
+    "types": "Fiction",
+    "rate": 3,
+    "isbn": "978-602-424-834-5",
+    "status": "Finished"
+  },
+  {
+    "title": "The Adventure of the Blue Carbuncle",
+    "dateRead": "2025-09-10",
+    "cover": "/images/books/berlian-biru.jpg",
+    "author": "Sir Arthur Conan Doyle",
+    "blurb": "Holmes dan Watson melacak asal-usul batu permata curian yang secara mengejutkan ditemukan di dalam tembolok seekor angsa natal.",
+    "pages": 147,
+    "genre": [
+      "Detective",
+      "Mystery"
+    ],
+    "types": "Fiction",
+    "rate": 4,
+    "isbn": "978-0-14-043771-3",
+    "status": "Finished"
+  },
+  {
+    "title": "Endless Night",
+    "dateRead": "2024-06-05",
+    "cover": "/images/books/endless-night.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Michael Rogers membangun rumah impian di tanah terkutuk, namun tragedi misterius segera menghancurkan kebahagiaan pernikahannya.",
+    "pages": 304,
+    "genre": [
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ],
+    "types": "Fiction",
+    "rate": 4,
+    "isbn": "978-0-00-713661-1",
+    "status": "Finished"
+  },
+  {
+    "title": "Murder of Roger Ackroyd",
+    "dateRead": "2025-12-20",
+    "cover": "/images/books/murder-of-roger-ackroyd.jpg",
+    "author": "Agatha Christie",
+    "blurb": "Hercule Poirot harus mengungkap terbunuhnya Roger Ackroyd di desa King's Abbot yang tenang.",
+    "pages": 352,
+    "genre": ["Mystery", "Detective", "Crime"],
+    "types": "Fiction",
+    "rate": 4.5,
+    "isbn": "978-979-22-9214-5",
+    "status": "Finished"
+  },
+  {
+    "title": "Gadis Kretek",
+    "dateRead": "2025-06-06",
+    "cover": "/images/books/gadis-kretek.jpg",
+    "author": "Ratih Kumala",
+    "blurb": "Pencarian Jeng Yah mengungkap sejarah kretek Indonesia dan rahasia cinta di balik saus rokok legendaris.",
+    "pages": 274,
+    "genre": ["History", "Romance", "Drama"],
+    "types": "Fiction",
+    "rate": 3,
+    "isbn": "978-979-22-8141-5",
+    "status": "DNF"
+  },
+  {
+    "title": "The Traveling Cat Chronicles",
+    "dateRead": "2025-12-31",
+    "cover": "/images/books/traveling-cat-chronicles.jpg",
+    "author": "Hiro Arikawa",
+    "blurb": "Kisah tentang kucing dan pemiliknya yang melakukan perjalanan mengunjungi teman-teman lama mereka.",
+    "pages": 260,
+    "genre": ["Animal", "Drama"],
+    "types": "Fiction",
+    "rate": 0,
+    "isbn": "978-602-06-1549-3",
+    "status": "Ongoing"
+  },
+  {
+    "title": "Berani Tidak Disukai",
+    "dateRead": "2025-12-01",
+    "cover": "/images/books/berani-tidak-disukai.jpg",
+    "author": "Ichiro Kishimi & Fumitake Koga",
+    "blurb": "Dialog filosofis tentang psikologi Adlerian untuk meraih kebahagiaan dengan cara berani melepaskan diri dari penilaian orang lain.",
+    "pages": 350,
+    "genre": ["Psychology", "Philosophy"],
+    "types": "Non-Fiction",
+    "rate": 0,
+    "isbn": "978-602-06-3373-2",
+    "status": "Ongoing"
+  }
+]

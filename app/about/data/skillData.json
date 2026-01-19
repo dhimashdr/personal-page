@@ -1,0 +1,17 @@
+[
+    {
+        "diff": "Beginner",
+        "theme": "#111827",
+        "skill": ["NextJS", "TypeScript", "JavaScript"]
+    },
+    {
+        "diff": "Decent",
+        "theme": "#162031",
+        "skill": ["Figma", "TailwindCSS"]
+    },
+    {
+        "diff": "Intermediate",
+        "theme": "#1C2C42",
+        "skill": ["Inkscape", "Python"]
+    }
+]

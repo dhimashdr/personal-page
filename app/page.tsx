@@ -1,65 +1,133 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+import { HomeIcon as HomeOutline, BookOpenIcon as LibraryOutline, Square3Stack3DIcon as StuffOutline, NewspaperIcon as BlogOutline, UserIcon as AboutOutline } from "@heroicons/react/24/outline"
+
+import socialData from "@/app/data/socials.json"
+import bookData from "@/app/library/data/bookData.json"
+
+import { motion as m } from "framer-motion"
+import Header from "./ui/components/header"
+import Footer from "./ui/components/footer"
+import SocialCards from "./ui/components/socialCards"
+import OBCards from "./ui/components/ongoingBookCards"
+
+const ongoingBook = bookData.filter(book => book.status === "Ongoing")
+
+export default function Home(){
+  return <div className="w-full lg:pl-16 bg-linear-60 from-cyan-900/10 to-lime-900/10 min-h-screen">
+    <div className="top-0 sticky z-60 bg-transparent left-0">
+      <Header title="" desc="nice to meet you!"/>
     </div>
-  );
+    
+    <div className="w-full relative overflow-hidden">
+      <m.div 
+        className="absolute bottom-0 z-50 w-full h-screen"
+        animate={{
+        backgroundColor: ["#000957", "#344CB7", "#577BC1", "#000957"],
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+      ></m.div>
+      <div className="w-full relative grid grid-cols-2 z-55 bg-linear-to-r from-gray-900 from-80%  to-gray-900/60 to-100% h-60 px-10">
+        <div className="my-auto">
+          <m.h1 
+            className="font-bold text-2xl lg:text-4xl"
+            initial={{y: 10, opacity: 0}}
+            animate={{
+              color: ["#4ED7F1", "#6FE6FC", "#A8F1FF", "#FFFA8D", "#4ED7F1"], y: 0, opacity: 1
+            }}
+            transition={{
+                y: {
+                  duration: 0.6,
+                  ease: "easeOut"
+                },
+                opacity: {
+                  duration: 0.6,
+                  ease: "easeOut"
+                },
+                color: {
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut" 
+                }
+            }}>
+            Hello!
+          </m.h1>
+          <br />
+          <m.p 
+            className="font-light text-xs lg:text-sm"
+            initial={{y: 20, opacity: 0}}
+            animate={{
+              y: 0, opacity: 1
+            }}
+            transition={{
+              duration: 0.6, 
+              ease: "easeOut"
+            }}>
+            It's a nice to meet you! 🫡😄
+          </m.p>
+        </div>
+        <div className="m-auto">
+        </div>
+      </div>
+    </div>
+    <hr />
+    <m.section className="my-5 px-10" initial={{y: 20, opacity: 0}}
+            animate={{
+              y: 0, opacity: 1
+            }}
+            transition={{
+              duration: 0.6, 
+              ease: "easeOut"
+            }}>
+      <h1 className="font-bold text-xl lg:text-3xl mb-5">What is This?</h1>
+      <p className="text-xs lg:text-sm">
+            This is my personal page, supposed to be an archive of what I've done or what I like. But it will be updated once I got better ideas. Pardon me if this page is so lame and boring.
+      </p>
+      <br />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><LibraryOutline className="size-8"/><span>is <span className="font-bold"> Library </span> section, you can see some books that I've read and its reviews.</span></div>
+        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><StuffOutline className="size-8"/><span>is <span className="font-bold">Stuff</span> section, supposed to be filled with stuff or project that I've made.</span></div>
+        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><BlogOutline className="size-8"/><span>is <span className="font-bold">Blog</span> section, I made it to write some notes, like study notes or something else.</span></div>
+        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><AboutOutline className="size-8"/><span>is <span className="font-bold">About</span> section, if you want to know more about me :D.</span></div>
+      </div>
+    </m.section>
+    <hr />
+    <m.section className="my-5 px-10" initial={{y: 20, opacity: 0}}
+            animate={{
+              y: 0, opacity: 1
+            }}
+            transition={{
+              duration: 0.6, 
+              ease: "easeOut"
+            }}>
+      <h1 className="font-bold mb-5 text-xl lg:text-3xl">Reading Now</h1>
+      <div className="grid grid-cols-1 gap-2">
+        {ongoingBook.map((book, i) => {
+        return <OBCards book={book} key={i}/>
+      })}
+      </div>
+    </m.section>
+    <hr />
+    <m.section className="my-5 px-10" initial={{y: 20, opacity: 0}}
+            animate={{
+              y: 0, opacity: 1
+            }}
+            transition={{
+              duration: 0.6, 
+              ease: "easeOut"
+            }}>
+      <h1 className="font-bold text-xl lg:text-3xl mb-5">Let's Connect</h1>
+      <div className="grid grid-cols-2 gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
+        {socialData.map((social, i) => {
+          return <SocialCards key={i} social={social}/>
+        })}
+      </div>
+    </m.section>
+    <br />
+    <Footer/>
+  </div>
 }

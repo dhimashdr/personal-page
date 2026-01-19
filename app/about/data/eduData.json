@@ -1,0 +1,34 @@
+[
+    {
+        "id": "ugm",
+        "school": "Universitas Gadjah Mada",
+        "subject": "(Bachelor of Mathematics)",
+        "theme": "#0C2C55",
+        "yearStart": "2021",
+        "yearEnd": "2025"
+    },
+    {
+        "id": "andasya",
+        "school": "SMA N 1 Boyolali",
+        "subject": "(Science)",
+        "theme": "#2693CE",
+        "yearStart": "2018",
+        "yearEnd": "2021"
+    },
+    {
+        "id": "espa",
+        "school": "SMP N 4 Boyolali",
+        "subject": "",
+        "theme": "#8B664C",
+        "yearStart": "2015",
+        "yearEnd": "2018"
+    },
+    {
+        "id": "sd",
+        "school": "SD N 2 Tumang",
+        "subject": "",
+        "theme": "#EC3237",
+        "yearStart": "2009",
+        "yearEnd": "2015"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "LinkedIn",
+        "url": "https://www.linkedin.com/in/dimas-hendrico",
+        "theme": "#0077B5"
+    },
+    {
+        "id": "Instagram",
+        "url": "https://www.instagram.com/dhimashdr",
+        "theme": "#E1306C"
+    },
+    {
+        "id": "Github",
+        "url": "https://www.github.com/dhimashdr",
+        "theme": "#202024"
+    },
+    {
+        "id": "Facebook",
+        "url": "https://www.facebook.com/dhimashdr",
+        "theme": "#1877F2"
+    }
+]

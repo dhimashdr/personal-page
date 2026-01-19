@@ -1,0 +1,34 @@
+[
+    {
+        "id": "wordle",
+        "title": "Wordle",
+        "createdAt": "2026-06-17",
+        "url": "https://dhimashdr.github.io/Wordle",
+        "summary": "Guess the 5 letter word in 6 tries.",
+        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
+    },
+    {
+        "id": "wordle",
+        "title": "Wordle",
+        "createdAt": "2026-06-17",
+        "url": "https://dhimashdr.github.io/Wordle",
+        "summary": "Guess the 5 letter word in 6 tries.",
+        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
+    },
+    {
+        "id": "wordle",
+        "title": "Wordle",
+        "createdAt": "2026-06-17",
+        "url": "https://dhimashdr.github.io/Wordle",
+        "summary": "Guess the 5 letter word in 6 tries.",
+        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
+    },
+    {
+        "id": "undergraduate-thesis",
+        "title": "Undergraduate Thesis Simulation",
+        "createdAt": "2026-06-17",
+        "url": "https://dhimashdr.github.io/Wordle",
+        "summary": "Simulations of spectral method to find the numerical solutions certain boundary value problems.",
+        "techStack": ["python", "javascript"]
+    }
+]

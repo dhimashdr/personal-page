@@ -1,0 +1,46 @@
+[
+    {
+        "id": "kmfm",
+        "name": "KMFM UGM",
+        "subname": "(Keluarga Muslim Fakultas MIPA UGM)",
+        "theme": "#5D9C38",
+        "breakdown": [
+            {
+                "pos": "Staff of Media and Information Department",
+                "skill": ["canva", "inkscape"],
+                "dateStart": "Oct 2021",
+                "dateEnd": "Dec 2022",
+                "detail": ["Working on some social media feed designs", "Coordinate an annual design training event with other staffs"]
+            },
+            {
+                "pos": "Head of Media and Information Department",
+                "skill": ["canva", "figma", "inkscape"],
+                "dateStart": "Jan 2023",
+                "dateEnd": "Dec 2023",
+                "detail": ["Made design guidelines for one period", "Held annual design training event for public with staffs", "Responsible for all media and information department's works"]
+            }
+        ]
+    },
+    {
+        "id": "lmnas",
+        "name": "LMNas UGM",
+        "subname": "(Lomba Matematika Nasional UGM)",
+        "theme": "#0170B7",
+        "breakdown": [
+            {
+                "pos": "Staff of Digital Kreasi",
+                "skill": ["canva", "inkscape", "html5", "css3"],
+                "dateStart": "Mar 2023",
+                "dateEnd": "Dec 2023",
+                "detail": ["Working on some social media feed designs", "Working on Semnastika 15 UGM webpage"]
+            },
+            {
+                "pos": "Sub-coordinator of Digital Kreasi",
+                "skill": ["figma", "tailwindcss"],
+                "dateStart": "Mar 2024",
+                "dateEnd": "Dec 2024",
+                "detail": ["Working on LMNas 35 UGM webpage", "Helping coordinator and other staffs"]
+            }
+        ]
+    }
+]

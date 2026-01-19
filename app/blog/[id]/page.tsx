@@ -1,0 +1,44 @@
+import postsData from "@/app/blog/data/postsData.json";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css'; 
+import Link from "next/link";
+
+
+const mdxComponents = {
+    Red: ({children} : {children : React.ReactNode}) => <span className="text-red-500">{children}</span>
+}
+
+interface PageProps{
+    params: Promise<{id: string}>
+}
+
+export default async function PostPage({params} : PageProps){
+    const { id } = await params
+    const post = postsData.find(post => post.id === id)
+    const date = new Date(post?.publishedAt ?? "2002-10-10");
+    const formattedDate = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+
+    return <div className="w-full">
+        <div className="bg-cover w-full h-[40vh] bg-center" style={{backgroundImage: `url(/images/posts/${post?.id}.jpg)`}}></div>
+        <div className="w-full px-6 lg:px-12 py-5 lg:py-10">
+            <div className="pb-5 lg:pb-10">
+                <h1 className="font-bold text-xl md:text-3xl">{post?.title}</h1>
+                <p className="font-light text-xs md:text-sm text-gray-400">{formattedDate} </p>
+            </div>
+            <div className="text-xs md:text-sm">
+                <MDXRemote source={post?.content ?? ""} components={mdxComponents} options={{
+                    mdxOptions: {
+                        remarkPlugins: [remarkMath],
+                        rehypePlugins: [rehypeKatex]
+                    }
+                }}/>
+            </div>
+        </div>
+    </div>
+}
