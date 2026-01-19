@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className="lg:pl-16 w-full">
     <div className="sticky top-0 z-60">
-      <Header title="Blog" desc="well, in case you're interested to read some of my writings"/>
+      <Header title="Blog" desc="some of my writings"/>
     </div>
     {children}
     <Footer/>
