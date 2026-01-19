@@ -31,7 +31,7 @@ export default function Home(){
         ease: "easeInOut"
       }}
       ></m.div>
-      <div className="w-full relative grid grid-cols-2 z-55 bg-linear-to-r from-gray-900 from-80%  to-gray-900/60 to-100% h-60 px-10">
+      <div className="w-full relative grid grid-cols-2 z-55 bg-linear-to-r from-gray-900 from-80%  to-gray-900/60 to-100% h-60 px-6 lg:px-16">
         <div className="my-auto">
           <m.h1 
             className="font-bold text-2xl lg:text-4xl"
@@ -75,7 +75,7 @@ export default function Home(){
       </div>
     </div>
     <hr />
-    <m.section className="my-5 px-10" initial={{y: 20, opacity: 0}}
+    <m.section className="my-5 px-6 lg:px-16" initial={{y: 20, opacity: 0}}
             animate={{
               y: 0, opacity: 1
             }}
@@ -96,7 +96,7 @@ export default function Home(){
       </div>
     </m.section>
     <hr />
-    <m.section className="my-5 px-10" initial={{y: 20, opacity: 0}}
+    <m.section className="my-5 px-6 lg:px-16" initial={{y: 20, opacity: 0}}
             animate={{
               y: 0, opacity: 1
             }}
@@ -112,7 +112,7 @@ export default function Home(){
       </div>
     </m.section>
     <hr />
-    <m.section className="my-5 px-10" initial={{y: 20, opacity: 0}}
+    <m.section className="my-5 px-6 lg:px-16" initial={{y: 20, opacity: 0}}
             animate={{
               y: 0, opacity: 1
             }}
@@ -129,5 +129,6 @@ export default function Home(){
     </m.section>
     <br />
     <Footer/>
+    <div className="h-10 lg:h-0"></div>
   </div>
 }

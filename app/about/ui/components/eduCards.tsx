@@ -20,12 +20,12 @@ export default function EduCards({edu} : Edu){
                         <div className="w-10 h-full relative">
                             <Image src={`/images/about/logo-${edu.id}.jpg`} alt={edu.id} fill/>
                         </div>
-                        <div className="flex gap-4 items-center-safe">
+                        <div className="flex gap-2 lg:gap-4 items-center-safe">
                             <h1 className="font-semibold text-xs lg:text-xl relative">
                                 {edu.school} <span className="font-light text-[0.5rem] lg:text-xs">{edu.subject}</span>
                             </h1>
                             <span> | </span>
-                            <p className="font-semibold backdrop-blur-xl text-[0.5rem] lg:text-xl">{edu.yearStart} - {edu.yearEnd}</p>
+                            <p className="font-semibold text-[0.5rem] lg:text-xs">{edu.yearStart} - {edu.yearEnd}</p>
                         </div>
                     </div>
         </div>
