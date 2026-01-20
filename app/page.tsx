@@ -118,6 +118,6 @@ export default function Home(){
     </m.section>
     <br />
     <Footer/>
-    <div className="h-16 lg:h-0"></div>
+    <div className="h-10 lg:h-0"></div>
   </div>
 }
