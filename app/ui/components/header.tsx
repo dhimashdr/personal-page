@@ -3,6 +3,7 @@
 import { inter } from "@/app/ui/fonts";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps{
     title: string,
@@ -10,7 +11,9 @@ interface HeaderProps{
 }
 
 export default function Header({title, desc}: HeaderProps){
-    return <div className="w-full flex py-2 xl:py-4 px-6 xl:px-10 items-center-safe bg-black/80 backdrop-grayscale-50 backdrop-blur-xl">
+    const pathname = usePathname()
+
+    return <div className={`w-full flex py-2 xl:py-4 px-6 xl:px-10 items-center-safe backdrop-grayscale-50 backdrop-blur-sm ${pathname === '/' ? 'top-0 sticky z-60 left-0 bg-black/70' : 'bg-black/80'}`}>
         <div className={`sm:text-2xl text-xl font-bold ${inter.className} flex-1/2 `}>
         <Link href="/">Dim's </Link> {title === '' ? '' : '/'} <Link className="text-gray-500" href={`/${title.toLowerCase()}`}>{title}</Link>
         <div>

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Stuff(){
     return <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 p-5 md:x-10 min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 p-5 md:p-10">
             {stuffData.map((stuff, index) => {
                 return <Link href={stuff.url} key={index}><Cards stuff={stuff}/></Link>
             })}

@@ -20,8 +20,8 @@ export default function EduCards({edu} : Edu){
                         <div className="w-10 h-full relative">
                             <Image src={`/images/about/logo-${edu.id}.jpg`} alt={edu.school} fill/>
                         </div>
-                        <div className="flex gap-2 lg:gap-4 items-center-safe">
-                            <h1 className="font-semibold text-xs lg:text-xl relative">
+                        <div className="flex gap-2 lg:gap-4 items-center-safe relative">
+                            <h1 className="font-semibold text-xs lg:text-xl">
                                 {edu.school} <span className="font-light text-[0.5rem] lg:text-xs">{edu.subject}</span>
                             </h1>
                             <span> | </span>

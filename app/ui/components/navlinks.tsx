@@ -46,7 +46,7 @@ export default function NavLinks(){
             const NavOutline = nav.outline
             const NavSolid = nav.solid
 
-            return <Link href={nav.url} key={nav.title} className={`${pathname === nav.url ? 'bg-blue-500/30' : 'bg-none'} px-2 transition-all duration-500 hover:bg-blue-500/30 ease-in rounded-sm my-auto mx-auto`}>
+            return <Link href={nav.url} key={nav.title} className={`${pathname === nav.url ? 'bg-blue-500/30' : 'bg-none'} px-2 transition-all duration-200 hover:bg-blue-500/30 ease-in rounded-sm my-auto mx-auto`}>
                     {pathname.includes(nav.url) && (nav.url !== "/" || pathname === "/")? <NavSolid className="size-6"/>  : <NavOutline className="size-6"/>}
             </Link>
         })}

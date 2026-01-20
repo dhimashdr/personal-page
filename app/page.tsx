@@ -14,24 +14,13 @@ import OBCards from "./ui/components/ongoingBookCards"
 const ongoingBook = bookData.filter(book => book.status === "Ongoing")
 
 export default function Home(){
-  return <div className="w-full lg:pl-16 bg-linear-60 from-cyan-900/10 to-lime-900/10 min-h-screen">
-    <div className="top-0 sticky z-60 bg-transparent left-0">
+  return <div className="w-full lg:pl-16 bg-linear-60 from-cyan-900/10 to-lime-900/10 min-h-screen relative">
+    {/* <div className="top-0 sticky z-60 left-0">
       <Header title="" desc="nice to meet you!"/>
-    </div>
-    
+    </div> */}
+    <Header title="" desc="nice to meet you!"/>
     <div className="w-full relative overflow-hidden">
-      <m.div 
-        className="absolute bottom-0 z-50 w-full h-screen"
-        animate={{
-        backgroundColor: ["#000957", "#344CB7", "#577BC1", "#000957"],
-      }}
-      transition={{
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
-      ></m.div>
-      <div className="w-full relative grid grid-cols-2 z-55 bg-linear-to-r from-gray-900 from-80%  to-gray-900/60 to-100% h-60 px-6 lg:px-16">
+      <div className="w-full relative grid grid-cols-2 z-55 h-60 px-6 lg:px-16">
         <div className="my-auto">
           <m.h1 
             className="font-bold text-2xl lg:text-4xl"

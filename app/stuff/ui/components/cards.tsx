@@ -15,15 +15,15 @@ interface Stuff{
 
 export default function Cards({stuff} : Stuff){
     return <div className="grid grid-cols-1 w-full rounded-lg overflow-hidden h-fit bg-linear-to-r from-slate-900/50 to-sky-950/50">
-        <div className="bg-cover bg-center h-30" style={{backgroundImage: `url(/images/stuff/${stuff.id}.jpg)`}}>
+        <div className="bg-cover bg-center h-20 lg:h-30" style={{backgroundImage: `url(/images/stuff/${stuff.id}.jpg)`}}>
         </div>
         <div className="h-fit my-auto grid grid-cols-2 p-5">
             <div>
-                <h1 className="font-bold text-xl">{stuff.title}</h1>
-                <p className="font-light text-xs text-gray-400">{stuff.summary}</p>
+                <h1 className="font-bold text-lg lg:text-xl">{stuff.title}</h1>
+                <p className="font-light text-[0.5rem] lg:text-xs text-gray-400">{stuff.summary}</p>
             </div>
             <div className="ml-auto grid grid-cols-1">
-                <div className="text-right text-xs text-gray-400 flex items-center-safe">
+                <div className="text-right text-[0.5rem] lg:text-xs text-gray-400 flex items-center-safe">
                     {stuff.createdAt}
                 </div>
                 <div className="flex items-end-safe">
@@ -32,7 +32,7 @@ export default function Cards({stuff} : Stuff){
                     return <Icon 
                             key={index} 
                             icon={`logos:${tech}`}
-                            height={20} width={20}/>
+                            className='w-3 h-3 lg:w-5 lg:h-5'/>
                     })}
                 </div>
                 </div>
