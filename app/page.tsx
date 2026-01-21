@@ -72,7 +72,7 @@ export default function Home(){
               duration: 0.6, 
               ease: "easeOut"
             }}>
-      <h1 className="font-bold text-xl lg:text-3xl mb-5">What is This?</h1>
+      <h1 className="font-bold text-xl lg:text-3xl mb-5 text-lime-200">What is This?</h1>
       <p className="text-xs lg:text-sm">
             This is my personal page, supposed to be an archive of what I've done or what I like. But it will be updated once I got better ideas. Pardon me if this page is so lame and boring.
       </p>
@@ -93,7 +93,7 @@ export default function Home(){
               duration: 0.6, 
               ease: "easeOut"
             }}>
-      <h1 className="font-bold mb-5 text-xl lg:text-3xl">Reading Now</h1>
+      <h1 className="font-bold mb-5 text-xl lg:text-3xl text-lime-200">Reading Now</h1>
       <div className="grid grid-cols-1 gap-2">
         {ongoingBook.map((book, i) => {
         return <OBCards book={book} key={i}/>
@@ -109,7 +109,7 @@ export default function Home(){
               duration: 0.6, 
               ease: "easeOut"
             }}>
-      <h1 className="font-bold text-xl lg:text-3xl mb-5">Let's Connect</h1>
+      <h1 className="font-bold text-xl lg:text-3xl mb-5 text-lime-200">Let's Connect</h1>
       <div className="grid grid-cols-2 gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
         {socialData.map((social, i) => {
           return <SocialCards key={i} social={social}/>
