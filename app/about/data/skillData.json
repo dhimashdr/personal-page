@@ -5,12 +5,12 @@
         "skill": ["NextJS", "TypeScript", "JavaScript"]
     },
     {
-        "diff": "Decent",
+        "diff": "Intermediate",
         "theme": "#162031",
         "skill": ["Figma", "TailwindCSS"]
     },
     {
-        "diff": "Intermediate",
+        "diff": "Advance",
         "theme": "#1C2C42",
         "skill": ["Inkscape", "Python"]
     }

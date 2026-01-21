@@ -21,8 +21,8 @@ export default function Cards({post} : Post){
                 <h1 className={`font-bold text-sm md:text-[1rem]`}>{post.title}</h1>
                 <p className="ml-auto text-[0.5rem] md:text-[0.65rem] font-light text-gray-400">{post.publishedAt}</p>
             </div>
-            <div>
-                <p className={`text-[0.625rem] md:text-xs font-light text-gray-400 text-shadow-gray-900 text-shadow-lg`}>{post.summary}</p>
+            <div className="">
+                <p className={`text-[0.625rem] md:text-xs font-light text-gray-400 text-shadow-gray-900 text-shadow-lg max-w-1/2`}>{post.summary}</p>
             </div>
             </div>
         </div>
