@@ -20,8 +20,8 @@ export default function Header({title, desc}: HeaderProps){
             <p className="text-[0.4rem] md:text-[0.625rem] font-light">{desc ?? ""}</p>
         </div>
         </div>
-        <div className={`flex-1/2 flex flex-row-reverse`}>
-            <Image className="border-b-2 border-solid border-white scale-60 md:scale-80" src="/images/bocchi-vibing-lonely.gif" alt="haroo" width={100} height={100} unoptimized></Image>
+        <div className={`flex-1/2`}>
+            <Image className="border-b-2 border-solid border-white w-18 ml-auto" src="/images/bocchi-vibing-lonely.gif" alt="haroo" width={100} height={100} unoptimized></Image>
         </div>
     </div>
 }
