@@ -3,8 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css'; 
-import Link from "next/link";
-
+import { Metadata } from 'next';
 
 const mdxComponents = {
     Red: ({children} : {children : React.ReactNode}) => <span className="text-red-500">{children}</span>
@@ -12,6 +11,22 @@ const mdxComponents = {
 
 interface PageProps{
     params: Promise<{id: string}>
+}
+
+
+
+export async function generateMetadata({params} : PageProps) : Promise<Metadata>{
+    const { id } = await params
+    const post = postsData.find(post => post.id === id)
+
+    return {
+        metadataBase: new URL("https://dhimashdr.vercel.app"),
+        title: post?.title ?? "Not Found",
+        description: post?.summary ?? "Not Found",
+        openGraph: {
+            images: [`/images/posts/${post?.id}.jpg`],
+        },
+    }
 }
 
 export default async function PostPage({params} : PageProps){

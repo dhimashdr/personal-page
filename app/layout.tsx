@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import NavLinks from "./ui/components/navlinks";
 import { inter, italianno, ibm_plex_sans } from "@/app/ui/fonts";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "dhimashdr's personal page",
-  description: "Hola amigos! nice to meet you!!!",
+  metadataBase: new URL("https://dhimashdr.vercel.app"),
+  title: 'dhimashdr personal page',
+  description: "Hello, fellows! Nice to meet you!",
+  openGraph: {
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({

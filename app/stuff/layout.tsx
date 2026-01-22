@@ -1,11 +1,15 @@
 import Header from "@/app/ui/components/header"
 import Footer from "@/app/ui/components/footer"
 
-import type { Metadata } from "next";;
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://dhimashdr.vercel.app"),
   title: 'dhimashdr | stuff',
-  description: "some of books that I've read",
+  description: "things I've made so far",
+  openGraph: {
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

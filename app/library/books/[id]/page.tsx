@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { inter } from "@/app/ui/fonts";
 import Cards from "@/app/library/ui/components/cards";
 import NotFound from "@/app/not-found";
+import { Metadata } from 'next';
 
 interface PageProps {
   params: Promise<{ id: string }>
@@ -13,6 +14,20 @@ interface PageProps {
 const mdxComponents = {
     Rating: ({value}: { value: number  }) => <div className="text-yellow-500">{"★".repeat(value)}</div>,
     TextRed: ({text}: {text : string}) => <p className="text-red-500">{text}</p>
+}
+
+export async function generateMetadata({params} : PageProps) : Promise<Metadata>{
+    const { id } = await params
+    const book = dataBuku.find((book) => book.isbn === id)
+
+    return {
+        metadataBase: new URL("https://dhimashdr.vercel.app"),
+        title: book?.title ?? "Not Found",
+        description: book?.blurb ?? "Not Found",
+        openGraph: {
+            images: [book?.cover ?? "/og-image.jpg"],
+        },
+    }
 }
 
 export default async function DetailBuku({ params }: PageProps){

@@ -15,9 +15,6 @@ const ongoingBook = bookData.filter(book => book.status === "Ongoing")
 
 export default function Home(){
   return <div className="w-full lg:pl-16 bg-linear-60 from-cyan-900/10 to-lime-900/10 min-h-screen relative">
-    {/* <div className="top-0 sticky z-60 left-0">
-      <Header title="" desc="nice to meet you!"/>
-    </div> */}
     <Header title="" desc="nice to meet you!"/>
     <div className="w-full relative overflow-hidden">
       <div className="w-full relative grid grid-cols-2 z-55 h-60 px-6 lg:px-16">
