@@ -13,7 +13,7 @@ interface HeaderProps{
 export default function Header({title, desc}: HeaderProps){
     const pathname = usePathname()
 
-    return <div className={`w-full flex py-2 xl:py-4 px-6 xl:px-10 items-center-safe backdrop-grayscale-50 backdrop-blur-sm ${pathname === '/' ? 'top-0 sticky z-60 left-0 bg-black/70' : 'bg-black/80'}`}>
+    return <div className={`w-full flex py-6 px-7 xl:px-10 items-center-safe backdrop-grayscale-50 backdrop-blur-sm ${pathname === '/' ? 'top-0 sticky z-60 left-0 bg-black/70' : 'bg-black/80'}`}>
         <div className={`sm:text-2xl text-xl font-bold ${inter.className} flex-1/2 `}>
         <Link href="/">Dim's </Link> {title === '' ? '' : '/'} <Link className="text-gray-500" href={`/${title.toLowerCase()}`}>{title}</Link>
         <div>
@@ -21,7 +21,7 @@ export default function Header({title, desc}: HeaderProps){
         </div>
         </div>
         <div className={`flex-1/2`}>
-            <Image className="border-b-2 border-solid border-white w-18 ml-auto" src="/images/bocchi-vibing-lonely.gif" alt="haroo" width={100} height={100} unoptimized></Image>
+            <Image className="border-b-2 border-solid border-white w-16 ml-auto" src="/images/bocchi-vibing-lonely.gif" alt="haroo" width={100} height={100} unoptimized></Image>
         </div>
     </div>
 }
