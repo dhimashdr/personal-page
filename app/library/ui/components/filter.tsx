@@ -78,10 +78,10 @@ export default function Filter(){
         })}
         </form>
         <div className="w-full flex font-semibold">
-            <label className="flex-1/2 bg-emerald-900 p-2 hover:bg-emerald-950 flex"><button type="button" onClick={inputFilter} className="flex-1/2 text-left">Tampilkan Pilihan</button> 
+            <label className="flex-1/2 bg-emerald-900 p-2 hover:bg-emerald-950 flex"><button type="button" onClick={inputFilter} className="flex-1/2 text-left">Show</button> 
             <ArrowUpRightIcon className="w-5"/>
             </label>
-            <label className="flex-1/2 bg-red-900 p-2 hover:bg-red-950 flex"><button type="button" onClick={clearFilter} className="flex-1/2 text-left">Hapus Pilihan</button>
+            <label className="flex-1/2 bg-red-900 p-2 hover:bg-red-950 flex"><button type="button" onClick={clearFilter} className="flex-1/2 text-left">Reset</button>
             <TrashIcon className="w-5"/>
             </label>
         </div>

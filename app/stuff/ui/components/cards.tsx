@@ -15,7 +15,7 @@ interface Stuff{
 
 export default function Cards({stuff} : Stuff){
     return <div className="grid grid-cols-1 w-full rounded-lg overflow-hidden h-fit bg-linear-to-r from-slate-900/50 to-sky-950/50">
-        <div className="bg-cover bg-center h-30" style={{backgroundImage: `url(/images/stuff/${stuff.id}.jpg)`}}>
+        <div className="bg-cover bg-top h-30" style={{backgroundImage: `url(/images/stuff/${stuff.id}.jpg)`}}>
         </div>
         <div className="h-fit my-auto grid grid-cols-2 p-5">
             <div>

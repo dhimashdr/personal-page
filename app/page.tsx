@@ -74,7 +74,7 @@ export default function Home(){
             }}>
       <h1 className="font-bold text-xl lg:text-3xl mb-5 text-lime-200">What is This?</h1>
       <p className="text-xs lg:text-sm">
-            This is my personal page, supposed to be an archive of what I've done or what I like. But it will be updated once I got better ideas. Pardon me if this page is so lame and boring.
+            This is my personal page, supposed to be an archive of what I've done or what I like. It will be updated once I got better ideas. This page is made by myself from scratch with NextJS. Hope you like it ^_^.
       </p>
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-1">

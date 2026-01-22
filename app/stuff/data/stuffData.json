@@ -2,41 +2,17 @@
     {
         "id": "wordle",
         "title": "Wordle",
-        "createdAt": "2026-06-17",
+        "createdAt": "2025-06-17",
         "url": "https://dhimashdr.github.io/Wordle",
-        "summary": "Guess the 5 letter word in 6 tries.",
+        "summary": "Guess the five letter word in six tries",
         "techStack": ["html-5", "tailwindcss-icon", "javascript"]
     },
     {
-        "id": "wordle",
-        "title": "Wordle",
-        "createdAt": "2026-06-17",
-        "url": "https://dhimashdr.github.io/Wordle",
-        "summary": "Guess the 5 letter word in 6 tries.",
-        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
-    },
-    {
-        "id": "wordle",
-        "title": "Wordle",
-        "createdAt": "2026-06-17",
-        "url": "https://dhimashdr.github.io/Wordle",
-        "summary": "Guess the 5 letter word in 6 tries.",
-        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
-    },
-    {
-        "id": "wordle",
-        "title": "Wordle",
-        "createdAt": "2026-06-17",
-        "url": "https://dhimashdr.github.io/Wordle",
-        "summary": "Guess the 5 letter word in 6 tries.",
-        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
-    },
-    {
-        "id": "wordle",
-        "title": "Wordle",
-        "createdAt": "2026-06-17",
-        "url": "https://dhimashdr.github.io/Wordle",
-        "summary": "Guess the 5 letter word in 6 tries.",
-        "techStack": ["html-5", "tailwindcss-icon", "javascript"]
+        "id": "unsplash",
+        "title": "Unsplash",
+        "createdAt": "2025-01-26",
+        "url": "https://unsplash.com/id/@dhimashr",
+        "summary": "Archives of my photography results",
+        "techStack": [""]
     }
 ]

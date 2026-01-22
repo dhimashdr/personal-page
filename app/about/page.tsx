@@ -19,10 +19,10 @@ export default function About(){
                     <h1 className="font-bold text-xl lg:text-3xl my-1 text-lime-200 mb-4">
                         About Me
                     </h1>
-                    <div className="text-justify text-xs lg:text-sm">
-                        <p>I'm a <span className="text-sky-200">machine learning</span> and <span className="text-rose-200">graphic design</span> enthusiast. Passionate in those fields and willing to learn more to know better, supported with related background, experiences, and interests. 
+                    <div className="text-xs lg:text-sm">
+                        <p>I'm a <span className="text-sky-200">machine learning, frontend developer</span> and <span className="text-sky-200">graphic design</span> enthusiast. Passionate in those fields and willing to learn more to know better, supported with related background, experiences, and interests. 
                         </p>
-                        <p className="mt-2">Other than that, I also doing something that I consider it as my hobbies. I do <span className="text-sky-200">photography</span> things and <span className="text-rose-200">reading books</span>. If you are wondering with my photography results, you can check it on my <Link className="underline decoration-2 decoration-rose-200 text-sky-200" href={"https://unsplash.com/id/@dhimashr/"} target="_blank">Unsplash</Link> profile. I also made <Link className="underline decoration-2 decoration-rose-200 text-sky-200" href={"/library"}>Library</Link> page in this website to list all books that I've read.</p>
+                        <p className="mt-2">Other than that, I also doing something that I consider it as my hobbies. I do <span className="text-sky-200">photography</span> things and <span className="text-sky-200">reading books</span>. If you are wondering with my photography results, you can check it on my <Link className="underline decoration-1 decoration-sky-200 text-sky-200" href={"https://unsplash.com/id/@dhimashr/"} target="_blank">Unsplash</Link> profile. I also made <Link className="underline decoration-1 decoration-sky-200 text-sky-200" href={"/library"}>Library</Link> page in this website to list all books that I've read.</p>
                     </div>
                 </section>
                 <hr />
