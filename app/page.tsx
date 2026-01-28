@@ -1,6 +1,6 @@
 'use client'
 
-import { HomeIcon as HomeOutline, BookOpenIcon as LibraryOutline, Square3Stack3DIcon as StuffOutline, NewspaperIcon as BlogOutline, UserIcon as AboutOutline } from "@heroicons/react/24/outline"
+import { BookOpenIcon as LibraryOutline, Square3Stack3DIcon as StuffOutline, NewspaperIcon as BlogOutline, UserIcon as AboutOutline } from "@heroicons/react/24/outline"
 
 import socialData from "@/app/data/socials.json"
 import bookData from "@/app/library/data/bookData.json"
@@ -70,15 +70,15 @@ export default function Home(){
               ease: "easeOut"
             }}>
       <h1 className="font-bold text-xl lg:text-3xl mb-5 text-lime-200">What is This?</h1>
-      <p className="text-xs lg:text-sm">
-            This is my personal page, supposed to be an archive of what I've done or what I like. It will be updated once I got better ideas. This page is made by myself from scratch with NextJS. Hope you like it ^_^.
+      <p className="text-[0.625rem] md:text-xs lg:text-sm">
+            This is my personal page, supposed to be an archive of what I've done or what I like. I also thought this could be my portfolio. It will be updated once I got better ideas. Hope you like it.
       </p>
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><LibraryOutline className="size-8"/><span>is <span className="font-bold"> Library </span> section, you can see some books that I've read and its reviews.</span></div>
-        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><StuffOutline className="size-8"/><span>is <span className="font-bold">Stuff</span> section, supposed to be filled with stuff or project that I've made.</span></div>
-        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><BlogOutline className="size-8"/><span>is <span className="font-bold">Blog</span> section, I made it to write some notes, like study notes or something else.</span></div>
-        <div className="text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><AboutOutline className="size-8"/><span>is <span className="font-bold">About</span> section, if you want to know more about me :D.</span></div>
+        <div className="text-[0.5rem] md:text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><LibraryOutline className="size-8"/><span>is <span className="font-bold"> Library </span> section, you can see some books that I've read and its reviews.</span></div>
+        <div className="text-[0.5rem] md:text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><StuffOutline className="size-8"/><span>is <span className="font-bold">Stuff</span> section, supposed to be filled with stuff or project that I've made.</span></div>
+        <div className="text-[0.5rem] md:text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><BlogOutline className="size-8"/><span>is <span className="font-bold">Blog</span> section, I made it to write some notes, like study notes or something else.</span></div>
+        <div className="text-[0.5rem] md:text-[0.625rem] lg:text-sm flex items-center-safe gap-2"><AboutOutline className="size-8"/><span>is <span className="font-bold">About</span> section, if you want to know more about me :D.</span></div>
       </div>
     </m.section>
     <hr />
@@ -107,7 +107,7 @@ export default function Home(){
               ease: "easeOut"
             }}>
       <h1 className="font-bold text-xl lg:text-3xl mb-5 text-lime-200">Let's Connect</h1>
-      <div className="grid grid-cols-2 gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
+      <div className="grid grid-flow-col gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
         {socialData.map((social, i) => {
           return <SocialCards key={i} social={social}/>
         })}

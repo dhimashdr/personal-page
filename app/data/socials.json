@@ -5,6 +5,11 @@
         "theme": "#0077B5"
     },
     {
+        "id": "Mail",
+        "url": "mailto:dhimashdr@gmail.com",
+        "theme": "#AA0000"
+    },
+    {
         "id": "Instagram",
         "url": "https://www.instagram.com/dhimashdr",
         "theme": "#E1306C"

@@ -3,13 +3,16 @@ import Cards from "./ui/components/cards";
 import Link from "next/link";
 import Search from "./ui/components/search";
 import Filter from "./ui/components/filter";
+import BookPagination from "./ui/components/pagination";
 
 export default async function Home({searchParams} : {searchParams : Promise<{
-    q: string,
-    g: string
+    q?: string,
+    g?: string,
+    p?: string
 }>}){
-    const { q, g } = await searchParams
-    const FilteredBooksData = BooksData.filter((book) => 
+    const { q, g, p } = await searchParams
+    const FilteredBooksData = BooksData.sort(((a, b) => a.title.localeCompare(b.title))
+            ).filter((book) => 
         {
             let matchSearch = true
             if (q) {
@@ -22,6 +25,14 @@ export default async function Home({searchParams} : {searchParams : Promise<{
             return matchSearch && matchFilter
         }
     )
+
+    const itemsPerPage = 6;
+    const currentPage = Number(p) || 1;
+    const totalPages = Math.ceil(FilteredBooksData.length / itemsPerPage);
+    
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedBooks = FilteredBooksData.slice(startIndex, endIndex);
 
     let notFound = ''
     if(FilteredBooksData.length === 0){
@@ -39,14 +50,14 @@ export default async function Home({searchParams} : {searchParams : Promise<{
             </div>
         </div>
         <div className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-            {FilteredBooksData.sort(((a, b) => a.title.localeCompare(b.title))
-            ).map((book, index) => {
-            return <Link href={`/library/books/${book.isbn}`} key={index}><Cards buku={book}/></Link>
-            })}
+            {paginatedBooks.map((book, index) => (
+                        <Link href={`/library/books/${book.isbn}`} key={index}>
+                            <Cards buku={book} />
+                        </Link>
+                    ))}
         </div>
         <div>{notFound}</div>
     </div>
+    {totalPages > 1 && (<BookPagination currentPage={currentPage} totalPages={totalPages}/>)}
     </div>
 }
-
-// <div className="w-fit mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"></div>

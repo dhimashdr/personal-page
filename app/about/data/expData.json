@@ -1,5 +1,27 @@
 [
     {
+        "id": "lmnas",
+        "name": "LMNas UGM",
+        "subname": "(Lomba Matematika Nasional UGM)",
+        "theme": "#0170B7",
+        "breakdown": [
+            {
+                "pos": "Staff of Digital Kreasi",
+                "skill": ["canva", "inkscape", "html5", "css3"],
+                "dateStart": "Mar 2023",
+                "dateEnd": "Dec 2023",
+                "detail": ["Working on some social media feed designs", "Working on Semnastika 15 UGM webpage"]
+            },
+            {
+                "pos": "Sub-coordinator of Digital Kreasi",
+                "skill": ["figma", "tailwindcss"],
+                "dateStart": "Mar 2024",
+                "dateEnd": "Dec 2024",
+                "detail": ["Working on LMNas 35 UGM webpage", "Helping coordinator and other staffs"]
+            }
+        ]
+    },
+    {
         "id": "bangkit",
         "name": "Bangkit",
         "subname": "",
@@ -26,7 +48,7 @@
                 "skill": ["python", "latex"],
                 "dateStart": "Feb 2024",
                 "dateEnd": "Jun 2024",
-                "detail": ["Preparing weekly learning module and assignment with others", "Teach and guide computational mathematics with implementation in Python language with other assistants", "Grade weekly assignments with other assistants"]
+                "detail": ["Preparing weekly learning module and assignment with other assistants", "Teach and guide computational mathematics with implementation in Python language with other assistants", "Grade weekly assignments with other assistants"]
             },
             {
                 "pos": "Graphic Designer",

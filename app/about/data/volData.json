@@ -20,27 +20,5 @@
                 "detail": ["Made design guidelines for one period", "Held annual design training event for public with staffs", "Responsible for all media and information department's works"]
             }
         ]
-    },
-    {
-        "id": "lmnas",
-        "name": "LMNas UGM",
-        "subname": "(Lomba Matematika Nasional UGM)",
-        "theme": "#0170B7",
-        "breakdown": [
-            {
-                "pos": "Staff of Digital Kreasi",
-                "skill": ["canva", "inkscape", "html5", "css3"],
-                "dateStart": "Mar 2023",
-                "dateEnd": "Dec 2023",
-                "detail": ["Working on some social media feed designs", "Working on Semnastika 15 UGM webpage"]
-            },
-            {
-                "pos": "Sub-coordinator of Digital Kreasi",
-                "skill": ["figma", "tailwindcss"],
-                "dateStart": "Mar 2024",
-                "dateEnd": "Dec 2024",
-                "detail": ["Working on LMNas 35 UGM webpage", "Helping coordinator and other staffs"]
-            }
-        ]
     }
 ]

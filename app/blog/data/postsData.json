@@ -1,11 +1,20 @@
 [
   {
-    "id": "tulisan-tidak-penting-1",
-    "title": "Halo",
+    "id": "hello-world",
+    "title": "Hello, World!",
     "publishedAt": "2026-01-15",
-    "summary": "Literally ini kosong wkwkw",
+    "summary": "How are you doing?",
     "category": "dump",
-    "tags": ["Numerical", "Python", "UGM"],
-    "content": "Nyari apa gesss?"
+    "tags": ["Greet"],
+    "content": "<Sql>Hello World</Sql> ![cat](/images/bocchi.gif)"
+  },
+  {
+    "id": "sql-1",
+    "title": "SQL - Part I",
+    "publishedAt": "2026-01-28",
+    "summary": "Notes from self-study SQL",
+    "category": "study",
+    "tags": ["SQL"],
+    "content": "field ~ column <br/> record ~ row <br/> table is made from fields and records <br/> database is a collection of tables <br/> SQL syntax isn't case sensitive <br/> most RDBMS use semicolon (;) to end a line <br/> <br/> <strong>SQL Commands</strong><br/> <Sql>SELECT</Sql> - extracts data from a database <br/><Sql>WHERE</Sql> - filter records with conditions <br/><Sql>UPDATE</Sql> - updates data in a database <br/><Sql>DELETE</Sql> - deletes data from a database <br/><Sql>INSERT INTO</Sql> - inserts new data into a database <br/><Sql>CREATE DATABASE</Sql> - creates a new database <br/><Sql>ALTER DATABASE</Sql> - modifies a database <br/><Sql>CREATE TABLE</Sql> - creates a new table <br/><Sql>ALTER TABLE</Sql> - modifies a table <br/><Sql>DROP TABLE</Sql> - deletes a table <br/><Sql>CREATE INDEX</Sql> - creates an index (search key) <br/><Sql>DROP INDEX</Sql> - deletes an index <br/> <br/> <strong>SQL Syntax Examples</strong><br/><Sql>SELECT col1, col2 FROM table;</Sql> -- select column1 and column2 from table <br/><Sql>SELECT * FROM table;</Sql> -- select all columns from table <br/><Sql>SELECT DISTINCT col1 FROM table;</Sql> -- select distinct values (unique) in col1 from table<br/><Sql>SELECT COUNT(DISTINCT col1) FROM table;</Sql> -- count distinct values in col1 from table <br/><Sql>SELECT col1 FROM table WHERE condition;</Sql> -- return all row in col1 from table where that has the condition <br/><Sql>SELECT col1 FROM table WHERE Name='Bocchi';</Sql> -- return all row in col1 from table where that has Name equal to Bocchi <br/><Sql>SELECT * FROM Products WHERE Price BETWEEN 50 AND 60;</Sql> -- filter price between range <br/><Sql>SELECT * FROM Customers WHERE City LIKE 's%';</Sql> -- filter city starting with 's'<br/><Sql>SELECT * FROM Customers WHERE City IN ('Paris','London');</Sql> -- multiple possible values"
   }
 ]

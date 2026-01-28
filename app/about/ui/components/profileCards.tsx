@@ -9,7 +9,7 @@ export default function ProfileCards(){
             <p className="whitespace-pre text-gray-500 font-light text-[0.625rem] md:text-sm lg:text-lg">Name&#9;&#9;: <span className="text-white font-medium">Dimas Hendrico</span></p>
             <p className="whitespace-pre text-gray-500 font-light text-[0.625rem] md:text-sm lg:text-lg">Email&#9;&#9;: <span className="text-white font-medium">dhimashdr@gmail.com</span></p>
             <p className="whitespace-pre text-gray-500 font-light text-[0.625rem] md:text-sm lg:text-lg">Domicile&#9;: <span className="text-white font-medium">Boyolali Regency, Central Java, Indonesia</span></p>
-            <p className="whitespace-pre text-gray-500 font-light text-[0.625rem] md:text-sm lg:text-lg">Status&#9;&#9;: <span className="text-white font-medium">🥲🥱</span></p>
+            {/* <p className="whitespace-pre text-gray-500 font-light text-[0.625rem] md:text-sm lg:text-lg">Status&#9;&#9;: <span className="text-white font-medium">🥲🥱</span></p> */}
         </div>
         <div className="my-auto ml-auto md:mx-auto">
             <div className="w-24 h-36 lg:w-48 lg:h-72 relative bg-linear-to-t from-gray-500/20 to-50% to-transparent">

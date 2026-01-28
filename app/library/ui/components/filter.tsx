@@ -13,6 +13,7 @@ export default function Filter(){
     const handleFilter = (filter : Array<string>) => {
         const params = new URLSearchParams(filterParams)
         if (filter.length != 0) {
+            params.delete('p')
             params.set('g', filter.map(g => g.toString()).join(' '))
         } else {
             params.delete('g')
@@ -22,7 +23,6 @@ export default function Filter(){
 
     function collectingGenre(){
         let genreArray : Array<string> = []
-
         bookData.map(book => {
             book.genre.map(genre => {
                 if (!genreArray.includes(genre)) {
@@ -30,7 +30,6 @@ export default function Filter(){
                 }
             })
         })
-
         return genreArray
     }
 

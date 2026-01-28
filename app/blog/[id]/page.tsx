@@ -4,16 +4,18 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css'; 
 import { Metadata } from 'next';
+import { source_code_pro } from "@/app/ui/fonts";
+import MDXImage from "../ui/components/mdximage";
 
 const mdxComponents = {
-    Red: ({children} : {children : React.ReactNode}) => <span className="text-red-500">{children}</span>
+    Red: ({children} : {children : React.ReactNode}) => <span className="text-red-500">{children}</span>,
+    Sql: ({children} : {children : React.ReactNode}) => <span className={`${source_code_pro.className} bg-slate-700 text-white px-1`}>{children}</span>,
+    img: MDXImage
 }
 
 interface PageProps{
     params: Promise<{id: string}>
 }
-
-
 
 export async function generateMetadata({params} : PageProps) : Promise<Metadata>{
     const { id } = await params
@@ -40,7 +42,7 @@ export default async function PostPage({params} : PageProps){
     });
 
     return <div className="w-full">
-        <div className="bg-cover w-full h-[40vh] bg-center" style={{backgroundImage: `url(/images/posts/${post?.id}.jpg)`}}></div>
+        <div className="bg-cover w-full min-h-[20vh] lg:min-h-[40vh] bg-center" style={{backgroundImage: `url(/images/posts/${post?.id}.jpg), url(/images/posts/blog-default.jpg)`}}></div>
         <div className="w-full px-6 lg:px-12 py-5 lg:py-10">
             <div className="pb-5 lg:pb-10">
                 <h1 className="font-bold text-xl md:text-3xl">{post?.title}</h1>

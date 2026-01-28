@@ -14,7 +14,7 @@ interface Post{
 }
 
 export default function Cards({post} : Post){
-    return <div className={`relative px-5 lg:px-8 py-4 h-full bg-cover bg-bottom items-center-safe rounded-2xl`} style={{backgroundImage: `url(/images/posts/${post.id}.jpg)`}}>
+    return <div className={`relative px-5 lg:px-8 py-4 h-full bg-cover bg-bottom items-center-safe rounded-2xl`} style={{backgroundImage: `url(/images/posts/${post.id}.jpg), url(/images/posts/blog-default.jpg)`}}>
             <div className="absolute inset-0 bg-linear-to-r from-gray-900 from-50% via-transparent via-70% to-gray-900 to-90% rounded-xl"></div>
             <div className="relative z-40">
                 <div className="grid grid-cols-2 items-center-safe">
