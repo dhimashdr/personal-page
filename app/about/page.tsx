@@ -85,7 +85,7 @@ export default function About(){
                     <h1 className="font-bold text-xl lg:text-3xl my-1 text-lime-200 mb-4">
                         Contacts
                     </h1>
-                    <div className="grid grid-flow-col gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
+                    <div className="grid grid-flow-col grid-rows-2 lg:grid-rows-1 gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
                             {socialData.map((social, i) => {
                               return <SocialCards key={i} social={social}/>
                             })}
