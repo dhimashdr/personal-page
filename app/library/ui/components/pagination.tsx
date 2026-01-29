@@ -6,7 +6,6 @@ import {
   Pagination,
   PaginationContent,
   PaginationEllipsis,
-  PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
@@ -20,6 +19,7 @@ interface BookPaginationInfo{
 export default function BookPagination({currentPage, totalPages} : BookPaginationInfo){
   const pageParams = useSearchParams()
   const pathName = usePathname()
+  const { replace } = useRouter()
   
   const handlePage = (page : number) => {
       const params = new URLSearchParams(pageParams)
@@ -28,72 +28,71 @@ export default function BookPagination({currentPage, totalPages} : BookPaginatio
       } else {
           params.delete('p')
       }
-
-      return `${pathName}?${params.toString()}`
+      replace(`${pathName}?${params.toString()}`)
   }
 
   return <div className="mt-10 mb-10">
             <Pagination>
                 <PaginationContent>
-                    <PaginationItem>
+                    <button>
                         <PaginationPrevious 
-                            href={currentPage > 1 ? handlePage(currentPage - 1) : "#"} 
+                            onClick={(e) => currentPage > 1 ? handlePage(currentPage - 1) : "#"} 
                             className={currentPage <= 1 ? "pointer-events-none opacity-50" : ""}
                         />
-                    </PaginationItem>
-                    {currentPage > 2 && <><PaginationItem className="sm:inline-block">
+                    </button>
+                    {currentPage > 2 && <><button className="sm:inline-block">
                             <PaginationLink 
-                                href={handlePage(1)} 
+                                onClick={(e) => handlePage(1)}
                             >
                                 1
                         </PaginationLink>
-                    </PaginationItem></>}
+                    </button></>}
                     {currentPage > 3 && <PaginationEllipsis/>}
 
-                    {currentPage > 1 && <><PaginationItem className="sm:inline-block">
+                    {currentPage > 1 && <><button className="sm:inline-block">
                             <PaginationLink 
-                                href={handlePage(currentPage - 1)} 
+                                onClick={(e) => handlePage(currentPage - 1)} 
                             >
                                 {currentPage - 1}
                         </PaginationLink>
-                    </PaginationItem></>}
-                    <PaginationItem className="sm:inline-block">
+                    </button></>}
+                    <button className="sm:inline-block">
                             <PaginationLink 
-                                href={handlePage(currentPage)} 
+                                onClick={(e) => handlePage(currentPage)} 
                                 isActive={currentPage === currentPage}
                             >
                                 {currentPage}
                         </PaginationLink>
-                    </PaginationItem>
-                    {(currentPage < totalPages) && <><PaginationItem className="sm:inline-block">
+                    </button>
+                    {(currentPage < totalPages) && <><button className="sm:inline-block">
                             <PaginationLink 
-                                href={handlePage(currentPage + 1)} 
+                                onClick={(e) => handlePage(currentPage + 1)} 
                             >
                                 {currentPage + 1}
                         </PaginationLink>
-                    </PaginationItem></>}
-                    {(totalPages === 3 && currentPage === 1) && <><PaginationItem className="sm:inline-block">
+                    </button></>}
+                    {(totalPages === 3 && currentPage === 1) && <><button className="sm:inline-block">
                             <PaginationLink 
-                                href={handlePage(3)} 
+                                onClick={(e) => handlePage(3)} 
                             >
                                 3
                         </PaginationLink>
-                    </PaginationItem>
+                    </button>
                     </>}
                     {(currentPage <= totalPages - 2 && totalPages > 3) && <PaginationEllipsis/>}
-                    {(totalPages > 3 && currentPage < totalPages - 1) && <><PaginationItem className="sm:inline-block">
+                    {(totalPages > 3 && currentPage < totalPages - 1) && <><button className="sm:inline-block">
                             <PaginationLink 
-                                href={handlePage(totalPages)} 
+                                onClick={(e) => handlePage(totalPages)} 
                             >
                                 {totalPages}
                         </PaginationLink>
-                    </PaginationItem></>}
-                    <PaginationItem>
+                    </button></>}
+                    <button>
                         <PaginationNext 
-                            href={currentPage < totalPages ? handlePage(currentPage + 1) : "#"} 
+                            onClick={(e) => currentPage < totalPages ? handlePage(currentPage + 1) : "#"} 
                             className={currentPage >= totalPages ? "pointer-events-none opacity-50" : ""}
                         />
-                    </PaginationItem>
+                    </button>
                 </PaginationContent>
             </Pagination>
         </div>
