@@ -1,9 +1,8 @@
 'use client'
 
-import Image from "next/image"
-
 interface PostData{
     id: string,
+    cover: string,
     title: string,
     publishedAt: string,
     summary: string
@@ -14,7 +13,8 @@ interface Post{
 }
 
 export default function Cards({post} : Post){
-    return <div className={`relative px-5 lg:px-8 py-4 h-full bg-cover bg-bottom items-center-safe rounded-2xl`} style={{backgroundImage: `url(/images/posts/${post.id}.jpg), url(/images/posts/blog-default.jpg)`}}>
+    return <div className={`relative px-5 lg:px-8 py-4 h-full items-center-safe rounded-2xl`}>
+            <div className="absolute w-2/3 h-full right-0 top-0 bg-cover bg-center rounded-2xl" style={{backgroundImage: `url(/images/posts/${post.cover}.jpg), url(/images/posts/blog-default.jpg)`}}></div>
             <div className="absolute inset-0 bg-linear-to-r from-gray-900 from-50% via-transparent via-70% to-gray-900 to-90% rounded-xl"></div>
             <div className="relative z-40">
                 <div className="grid grid-cols-2 items-center-safe">
