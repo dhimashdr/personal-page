@@ -49,7 +49,7 @@ export default async function Home({searchParams} : {searchParams : Promise<{
                 <Filter/>
             </div>
         </div>
-        <div className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+        <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {paginatedBooks.map((book, index) => (
                         <Link href={`/library/books/${book.isbn}`} key={index}>
                             <Cards buku={book} />

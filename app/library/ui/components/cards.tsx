@@ -20,7 +20,7 @@ interface Books{
     buku: BooksInfo
 };
 
-export default function Cards({buku} : Books){
+export default async function Cards({buku} : Books){
     return <div className="bg-linear-to-b from-red-950/40 to-cyan-950/40 flex rounded-sm md:rounded-md h-42 md:h-54 items-center-safe">
         <div className="flex-1/3 relative h-full w-full">
         <Status status={buku?.status}/>
