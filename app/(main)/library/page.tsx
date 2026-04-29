@@ -1,4 +1,4 @@
-import BooksData from "@/app/library/data/bookData.json";
+import BooksData from "./data/bookData.json";
 import Cards from "./ui/components/cards";
 import Link from "next/link";
 import Search from "./ui/components/search";

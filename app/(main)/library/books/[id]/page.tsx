@@ -1,9 +1,9 @@
 'use server'
 
-import dataBuku from "@/app/library/data/bookData.json";
+import dataBuku from "../../data/bookData.json";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { inter } from "@/app/ui/fonts";
-import Cards from "@/app/library/ui/components/cards";
+import Cards from "@/app/(main)/library/ui/components/cards";
 import NotFound from "@/app/not-found";
 import { Metadata } from 'next';
 

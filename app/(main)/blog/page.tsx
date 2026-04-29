@@ -1,4 +1,4 @@
-import postsData from "@/app/blog/data/postsData.json";
+import postsData from "./data/postsData.json";
 import Cards from "./ui/components/cards";
 import Link from "next/link";
 

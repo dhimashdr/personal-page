@@ -3,13 +3,13 @@
 import { BookOpenIcon as LibraryOutline, Square3Stack3DIcon as StuffOutline, NewspaperIcon as BlogOutline, UserIcon as AboutOutline } from "@heroicons/react/24/outline"
 
 import socialData from "@/app/data/socials.json"
-import bookData from "@/app/library/data/bookData.json"
+import bookData from "@/app/(main)/library/data/bookData.json"
 
 import { motion as m } from "framer-motion"
-import Header from "./ui/components/header"
-import Footer from "./ui/components/footer"
-import SocialCards from "./ui/components/socialCards"
-import OBCards from "./ui/components/ongoingBookCards"
+import Header from "../ui/components/header"
+import Footer from "../ui/components/footer"
+import SocialCards from "../ui/components/socialCards"
+import OBCards from "../ui/components/ongoingBookCards"
 
 const ongoingBook = bookData.filter(book => book.status === "Ongoing")
 

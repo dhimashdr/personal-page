@@ -1,5 +1,5 @@
-import "./globals.css";
-import NavLinks from "./ui/components/navlinks";
+import "@/app/globals.css";
+import NavLinks from "../ui/components/navlinks";
 import { inter, italianno, ibm_plex_sans } from "@/app/ui/fonts";
 
 import type { Metadata } from "next";

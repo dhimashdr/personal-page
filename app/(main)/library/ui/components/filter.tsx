@@ -1,6 +1,6 @@
 'use client'
 
-import bookData from "@/app/library/data/bookData.json";
+import bookData from "../../data/bookData.json";
 import { ArrowUpRightIcon, Bars3Icon, TrashIcon } from "@heroicons/react/16/solid";
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import { motion as m } from "framer-motion"

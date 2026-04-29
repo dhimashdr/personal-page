@@ -1,4 +1,4 @@
-import stuffData from "@/app/stuff/data/stuffData.json"
+import stuffData from "./data/stuffData.json"
 import Cards from "./ui/components/cards"
 import Link from "next/link"
 

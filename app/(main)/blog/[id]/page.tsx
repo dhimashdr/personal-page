@@ -1,4 +1,4 @@
-import postsData from "@/app/blog/data/postsData.json";
+import postsData from "../data/postsData.json";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
