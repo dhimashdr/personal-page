@@ -20,7 +20,7 @@
         "title": "Titanic Classifier",
         "createdAt": "2026-04-30",
         "url": "/stuff/machine-learning/titanic-classifier",
-        "summary": "Simple machine learning project",
+        "summary": "Simple machine learning project with scikit-learn",
         "techStack": ["python"]
     }
 ]

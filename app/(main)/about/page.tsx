@@ -77,7 +77,7 @@ export default function About(){
                     </h1>
                     <div className="flex gap-4 mx-auto w-fit">
                         <DocCards url='/documents/cv-dimas.pdf' title='Curriculum Vitae'/>
-                        <DocCards url='/documents/portfolio-design-2025-dimas.pdf' title='Design Portfolio'/>
+                        <DocCards url='/documents/portfolio-design-2026-dimas.pdf' title='Design Portfolio'/>
                     </div>
                 </section>
                 <hr />

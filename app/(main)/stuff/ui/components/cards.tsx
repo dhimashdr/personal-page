@@ -17,7 +17,7 @@ export default function Cards({stuff} : Stuff){
     return <div className="grid grid-cols-1 w-full rounded-lg overflow-hidden h-fit  group">
         <div className="bg-cover bg-top h-30 scale-100 group-hover:scale-105 transition-all duration-200 ease-in-out z-40" style={{backgroundImage: `url(/images/stuff/${stuff.id}.jpg)`}}>
         </div>
-        <div className="h-fit my-auto grid grid-cols-2 p-5 bg-linear-to-r from-slate-900 to-sky-950 z-50">
+        <div className="h-fit my-auto grid grid-cols-2 p-5 bg-linear-to-r from-slate-900 to-sky-950 z-40">
             <div>
                 <h1 className="font-bold text-lg lg:text-xl">{stuff.title}</h1>
                 <p className="font-light text-[0.5rem] lg:text-xs text-gray-400">{stuff.summary}</p>
