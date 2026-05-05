@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import { inter, google_sans } from "@/app/ui/fonts";
+import { inter, bricolage_grotesque } from "@/app/ui/fonts";
 
 import type { Metadata } from "next";
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${google_sans.className} antialiased w-full`}
+        className={`${bricolage_grotesque.className} antialiased w-full`}
       >
         <div>
           {children}

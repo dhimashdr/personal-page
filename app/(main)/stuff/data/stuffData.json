@@ -14,5 +14,13 @@
         "url": "https://unsplash.com/id/@dhimashr",
         "summary": "Archives of my photography results",
         "techStack": [""]
+    },
+    {
+        "id": "titanic",
+        "title": "Titanic Classifier",
+        "createdAt": "2026-04-30",
+        "url": "/stuff/machine-learning/titanic-classifier",
+        "summary": "Simple machine learning classification with scikit-learn",
+        "techStack": ["python"]
     }
 ]
