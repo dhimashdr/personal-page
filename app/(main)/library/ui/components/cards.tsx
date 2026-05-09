@@ -21,19 +21,19 @@ interface Books{
 };
 
 export default async function Cards({buku} : Books){
-    return <div className="bg-linear-to-b from-red-950/40 to-cyan-950/40 flex rounded-sm md:rounded-md h-42 md:h-54 items-center-safe">
+    return <div className="bg-linear-to-b from-red-950/40 to-cyan-950/40 flex rounded-sm md:rounded-md h-40 md:h-48 items-center-safe">
         <div className="flex-1/3 relative h-full w-full">
         <Status status={buku?.status}/>
-            <Image alt={buku?.title ?? "notfound"} src={buku?.cover} fill loading="lazy" placeholder="blur" blurDataURL="/images/books/book-blur.jpg" sizes="100" className="rounded-r-sm rounded-bl-sm lg:rounded-r-md lg:rounded-bl-md w-fit object-cover object-center"></Image>
+            <Image key={buku?.isbn} alt={buku?.title ?? "notfound"} src={buku?.cover} fill loading="lazy" placeholder="blur" blurDataURL="/images/books/book-blur.jpg" sizes="100" className="rounded-r-sm rounded-bl-sm lg:rounded-r-md lg:rounded-bl-md w-fit object-cover object-center"></Image>
         </div>
-        <div className={`${inter.className} mx-auto p-4 w-1/2 flex-2/3`}>
+        <div className={`${inter.className} mx-auto p-4 flex-2/3`}>
             <p className="font-black text-sm md:text-[1rem] leading-5">{buku?.title}</p>
-            <p className="text-[0.5rem] md:text-[0.65rem] mb-2 md:mb-4 mt-1"><span className="text-red-200">{buku?.author}</span> | <span className="text-blue-200">{buku?.pages} hlm</span></p>
-            <p className="text-[0.5rem] md:text-[0.65rem] mb-2 md:mb-4">{buku?.blurb}</p>
-            <div className="flex items-end-safe">
-                <div className="flex gap-1 flex-wrap flex-2/3 text-[0.5rem] md:text-[0.65rem] pb-1">
+            <p className="text-[0.5rem] md:text-[0.6rem] mb-2 md:mb-4 mt-1"><span className="text-red-200">{buku?.author}</span> | <span className="text-blue-200">{buku?.pages} hlm</span></p>
+            <p className="text-[0.5rem] md:text-[0.6rem] mb-2 md:mb-4">{buku?.blurb}</p>
+            <div className="flex items-center-safe">
+                <div className="flex gap-1 flex-wrap flex-2/3 text-[0.5rem] md:text-[0.625rem] pb-1">
                     {buku?.genre.map((g, i) => {
-                    return <div key={i} className="bg-slate-600 w-fit p-1 rounded-sm font-medium">{g}</div>
+                    return <div key={i} className="bg-slate-700 w-fit px-1 rounded-xs font-medium">{g}</div>
                     })}
                 </div>
                 <div className="flex-1/3 text-sm h-fit">

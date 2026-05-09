@@ -22,5 +22,13 @@
         "url": "/stuff/machine-learning/titanic-classifier",
         "summary": "Simple machine learning project with scikit-learn",
         "techStack": ["python"]
+    },
+    {
+        "id": "pokemon-finder",
+        "title": "Pokemon Finder",
+        "createdAt": "2026-04-30",
+        "url": "https://pokemon-cards-finder.vercel.app/",
+        "summary": "Find Pokemon TCG cards and its detail",
+        "techStack": ["nextjs", "tailwindcss-icon"]
     }
 ]
