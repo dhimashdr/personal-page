@@ -75,9 +75,10 @@ export default function About(){
                     <h1 className="font-bold text-xl lg:text-3xl my-1 text-lime-200 mb-4">
                         Documents
                     </h1>
-                    <div className="flex gap-4 mx-auto w-fit">
+                    <div className="flex gap-4 mx-auto w-fit flex-wrap justify-center">
                         <DocCards url='/documents/cv-dimas.pdf' title='Curriculum Vitae'/>
                         <DocCards url='/documents/portfolio-design-2026-dimas.pdf' title='Design Portfolio'/>
+                        <DocCards url='/documents/portfolio-uiux-2026-dimas.pdf' title='UI/UX Portfolio'/>
                     </div>
                 </section>
                 <hr />

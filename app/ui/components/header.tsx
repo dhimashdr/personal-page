@@ -21,7 +21,7 @@ export default function Header({title, desc}: HeaderProps){
         </div>
         </div>
         <div className={`flex-1/2`}>
-            <Image className="border-b-2 border-solid border-white w-16 ml-auto" src="/images/bocchi-vibing-lonely.gif" alt="haroo" width={100} height={100} unoptimized></Image>
+            <Image draggable='false' loading='eager' className="border-b-2 border-solid border-white w-16 ml-auto" src="/images/bocchi-vibing-lonely.gif" alt="haroo" width={100} height={100} unoptimized></Image>
         </div>
     </div>
 }

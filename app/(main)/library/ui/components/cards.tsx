@@ -24,7 +24,7 @@ export default async function Cards({buku} : Books){
     return <div className="bg-linear-to-b from-red-950/40 to-cyan-950/40 flex rounded-sm md:rounded-md h-40 md:h-48 items-center-safe">
         <div className="flex-1/3 relative h-full w-full">
         <Status status={buku?.status}/>
-            <Image key={buku?.isbn} alt={buku?.title ?? "notfound"} src={buku?.cover} fill loading="lazy" placeholder="blur" blurDataURL="/images/books/book-blur.jpg" sizes="100" className="rounded-r-sm rounded-bl-sm lg:rounded-r-md lg:rounded-bl-md w-fit object-cover object-center"></Image>
+            <Image key={buku?.isbn} alt={buku?.title ?? "notfound"} src={buku?.cover} fill loading="lazy" placeholder="blur" blurDataURL="/images/books/book-blur.jpg" sizes="100" className="rounded-r-sm rounded-bl-sm lg:rounded-r-md lg:rounded-bl-md w-fit object-cover object-center" draggable='false'></Image>
         </div>
         <div className={`${inter.className} mx-auto p-4 flex-2/3`}>
             <p className="font-black text-sm md:text-[1rem] leading-5">{buku?.title}</p>

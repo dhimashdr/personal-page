@@ -25,7 +25,7 @@ export default function ExpCards({id, name, subname, theme, breakdown} : Exp){
             <div className="w-full h-10 flex items-center-safe gap-2 relative" style={{backgroundColor: `${theme}`}}>
                 <div className="absolute w-full h-full bg-linear-to-r from-transparent to-gray-900 z-0 top-0 left-0"></div>
                 <div className="w-10 h-full relative">
-                    <Image src={`/images/about/logo-${id}.jpg`} alt={name} fill/>
+                    <Image draggable='false' src={`/images/about/logo-${id}.jpg`} alt={name} fill sizes="10"/>
                 </div>
                 <h1 className="font-semibold text-xs lg:text-xl relative">
                     {name} <span className="font-light text-[0.5rem] lg:text-xs">{subname}</span>

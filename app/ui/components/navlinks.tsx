@@ -39,7 +39,7 @@ const navs = [
     }
 ]
 
-const MLink = m(Link)
+const MLink = m.create(Link)
 
 export default function NavLinks(){
     const pathname = usePathname()

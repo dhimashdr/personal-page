@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { motion as m } from "framer-motion"
+import { motion as m } from "motion/react"
 
 export default function ProfileCards(){
     return <div className="grid grid-cols-2">
@@ -13,7 +13,7 @@ export default function ProfileCards(){
         </div>
         <div className="my-auto ml-auto md:mx-auto">
             <div className="w-24 h-36 lg:w-48 lg:h-72 relative bg-linear-to-t from-gray-500/20 to-50% to-transparent">
-                <Image src={'/images/about/me.png'} alt="pfp" fill className="relative z-30"/>
+                <Image draggable='false' src={'/images/about/me.png'} alt="pfp" fill className="relative z-30" sizes="1"/>
                 <m.div className="absolute w-4 h-4 lg:w-10 lg:h-10 top-1/2 left-3/5"
                 animate={{backgroundColor: ["#6AECE1", "#26CCC2", "#FFF57E", "#6AECE1"]}}
                 transition={{duration: 4, repeat: Infinity, ease: "easeInOut"}}
