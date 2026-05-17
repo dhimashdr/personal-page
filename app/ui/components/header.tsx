@@ -13,7 +13,7 @@ interface HeaderProps{
 export default function Header({title, desc}: HeaderProps){
     const pathname = usePathname()
 
-    return <div className={`w-full flex py-6 px-7 xl:px-10 items-center-safe backdrop-grayscale-50 backdrop-blur-sm ${pathname === '/' ? 'top-0 sticky z-60 left-0 bg-black/70' : 'bg-black/80'}`}>
+    return <div className={`w-full flex py-6 px-7 xl:px-10 items-center-safe backdrop-grayscale-50 backdrop-blur-sm border-b border-slate-900 ${pathname === '/' ? 'top-0 sticky z-60 left-0 bg-black/70' : 'bg-black/80'}`}>
         <div className={`sm:text-2xl text-xl font-bold ${inter.className} flex-1/2 `}>
         <Link href="/">Dim's </Link> {title === '' ? '' : '/'} <Link className="text-gray-500" href={`/${title.toLowerCase()}`}>{title}</Link>
         <div>

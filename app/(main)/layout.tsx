@@ -25,7 +25,9 @@ export default function RootLayout({
       >
         <div>
           <NavLinks />
-          {children}
+          <div className="lg:pl-24">
+            {children}
+          </div>
         </div>
       </body>
     </html>

@@ -14,7 +14,7 @@ import OBCards from "../ui/components/ongoingBookCards"
 const ongoingBook = bookData.filter(book => book.status === "Ongoing")
 
 export default function Home(){
-  return <div className="w-full lg:pl-16 bg-linear-60 from-cyan-900/10 to-lime-900/10 min-h-screen relative">
+  return <div className="w-full  min-h-screen relative">
     <Header title="" desc="nice to meet you!"/>
     <div className="w-full relative overflow-hidden">
       <div className="w-full relative grid grid-cols-2 z-55 h-60 px-6 lg:px-16">
@@ -107,7 +107,7 @@ export default function Home(){
               ease: "easeOut"
             }}>
       <h1 className="font-bold text-xl lg:text-3xl mb-5 text-lime-200">Let's Connect</h1>
-      <div className="grid grid-flow-col grid-rows-2 lg:grid-rows-1 gap-2 px-5 md:px-10 lg:px-20 xl:px-40">
+      <div className="flex flex-wrap gap-2">
         {socialData.map((social, i) => {
           return <SocialCards key={i} social={social}/>
         })}
