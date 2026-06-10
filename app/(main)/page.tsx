@@ -97,7 +97,7 @@ export default function Home(){
       })}
       </div>
     </m.section>
-    <hr />
+    {/* <hr />
     <m.section className="my-5 px-6 lg:px-16" initial={{y: 20, opacity: 0}}
             animate={{
               y: 0, opacity: 1
@@ -113,7 +113,7 @@ export default function Home(){
         })}
       </div>
     </m.section>
-    <br />
+    <br /> */}
     <Footer/>
     <div className="h-12 lg:h-0"></div>
   </div>
