@@ -38,7 +38,7 @@ export default async function DetailBuku({ params }: PageProps){
         <div className="w-full">
             <section className="bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${book?.cover})`
             }}>
-                <div className="bg-linear-to-t from-background to-background/50 backdrop-blur-sm w-full px-6 lg:px-18 py-8 border-b-2 border-lime-200">
+                <div className={`bg-linear-to-t from-background to-background/50 backdrop-blur-sm w-full px-6 lg:px-18 py-8 border-b-2 ${book.status == 'Finished' ? 'border-green-600' : (book.status == 'DNF' ? 'border-red-600' : 'border-orange-400')}`}>
                     {/* <h1 className={`${inter.className} font-bold text-2xl md:text-3xl lg:text-4xl`}>Info</h1> */}
                     {/* <hr className="text-slate-600"/> */}
                     {/* <br /> */}

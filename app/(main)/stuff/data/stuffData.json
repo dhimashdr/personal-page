@@ -30,5 +30,13 @@
         "url": "https://pokemon-cards-finder.vercel.app/",
         "summary": "Find Pokemon TCG cards and its detail",
         "techStack": ["nextjs", "tailwindcss-icon"]
+    },
+    {
+        "id": "music-recommendation",
+        "title": "Music Recommendation",
+        "createdAt": "2026-07-02",
+        "url": "https://music-recommendation-theta.vercel.app/",
+        "summary": "Music recommendations from music title",
+        "techStack": ["nextjs", "tailwindcss-icon"]
     }
 ]
