@@ -53,7 +53,7 @@ if (filterParams.get('g')) {
         <button onClick={showFilter} className="px-4 w-full bg-slate-900 text-left hover:bg-slate-800 rounded-full delay-50 transition-all py-1 text-slate-400 border md:border-2 border-slate-600 focus:border-sky-300">
             <div className="flex">
                 <span className="flex-1/2 my-auto">{genrePlaceholder}</span>
-                <Bars3Icon className="w-5 text-white"/>
+                <Bars3Icon className="w-5 text-slate-600"/>
             </div>
         </button>
         <div id="Genres" className="hidden absolute z-55 w-full">

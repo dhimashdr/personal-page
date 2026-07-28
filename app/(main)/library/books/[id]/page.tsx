@@ -68,7 +68,8 @@ export default async function DetailBuku({ params }: PageProps){
     const book = await getBook(id)
     // const book = dataBuku.find((book) => book.isbn === id)
     
-    return ( book ?
+    return <>
+    {book ?
         <div className="w-full">
             <section className="bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${urlFor(book[0].cover).url()})`
             }}>
@@ -102,6 +103,8 @@ export default async function DetailBuku({ params }: PageProps){
                 <p className="text-right">- {book[0].author}</p>
             </div>
             </section>
-        </div> : <NotFound/>
-    )
+        </div> : <NotFound/>}
+        <br />
+        <hr />
+    </>
 }

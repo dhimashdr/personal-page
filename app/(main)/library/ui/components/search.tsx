@@ -23,6 +23,6 @@ export default function Search(){
 
     return <m.div className="flex bg-slate-900  w-full rounded-3xl px-4 py-1 border md:border-2 text-xs md:text-sm focus-within:border-sky-300 border-slate-600" layout>
         <input placeholder="Search book by title..." type="text" onChange={(e) => handleSearch(e.target.value)} defaultValue={searchParams.get('q')?.toString()} className="focus:ring-0 focus:outline-none flex-1/2"/>
-        <MagnifyingGlassIcon className="w-5"/>
+        <MagnifyingGlassIcon className="w-5 text-slate-600"/>
     </m.div>
 }

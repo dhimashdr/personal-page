@@ -13,7 +13,8 @@ import SocialCards from "../../ui/components/socialCards"
 import Link from "next/link"
 
 export default function About(){
-    return <div className="w-full px-6 lg:px-16">
+    return <>
+    <div className="w-full px-6 lg:px-16">
                 <section>
                     <ProfileCards/>
                 </section>
@@ -92,5 +93,8 @@ export default function About(){
                             })}
                           </div>
                 </section>
+                
             </div>
+            <br /><hr />
+    </>
 }

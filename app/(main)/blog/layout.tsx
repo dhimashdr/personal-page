@@ -19,6 +19,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </div>
     {children}
     <Footer/>
-    <div className="h-12 lg:h-0"></div>
   </div>
 }

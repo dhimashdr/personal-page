@@ -54,7 +54,7 @@ export default async function Home({searchParams} : {searchParams : Promise<{
     //     notFound = 'Not Found'
     // }
 
-    return <div className="w-full mt-5 min-h-screen">
+    return <div className="w-full mt-5 min-h-50vh">
     <div className="px-6 md:px-10 mx-auto">
         <div className="flex w-full gap-2 mb-6 flex-col md:flex-row md:justify-between">
             <div className="flex-7/12">
@@ -71,14 +71,7 @@ export default async function Home({searchParams} : {searchParams : Promise<{
         </div>
     </div>
     {totalPages > 1 && (<BookPagination currentPage={currentPage} totalPages={totalPages}/>)}
+    <br />
+    <hr />
     </div>
 }
-
-
-{/* {paginatedBooks.map((book, index) => (
-                        <Link href={`/library/books/${book.isbn}`} key={index}>
-                            <Cards key={index} buku={book} />
-                        </Link>
-                    ))} */}
-
-{/* <div>{notFound}</div> */}

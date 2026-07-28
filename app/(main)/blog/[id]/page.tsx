@@ -51,6 +51,8 @@ export default async function PostPage({params} : PageProps){
                 <PortableText value={data[0].content}/>
             </div>
         </div>
+        <br />
+        <hr />
     </div>
 }
 

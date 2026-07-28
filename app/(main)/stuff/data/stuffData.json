@@ -26,7 +26,7 @@
     {
         "id": "pokemon-finder",
         "title": "Pokemon Finder",
-        "createdAt": "2026-04-30",
+        "createdAt": "2026-05-07",
         "url": "https://pokemon-cards-finder.vercel.app/",
         "summary": "Find Pokemon TCG cards and its detail",
         "techStack": ["nextjs", "tailwindcss-icon"]
