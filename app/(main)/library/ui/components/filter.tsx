@@ -1,65 +1,52 @@
+// import bookData from "../../data/bookData.json";
 'use client'
 
-import bookData from "../../data/bookData.json";
 import { ArrowUpRightIcon, Bars3Icon, TrashIcon } from "@heroicons/react/16/solid";
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import { motion as m } from "framer-motion"
 
-export default function Filter(){
+export default function Filter({genreArray}: {genreArray: Array<string>}){
     const filterParams = useSearchParams()
-    const pathName = usePathname()
-    const { replace } = useRouter()
+const pathName = usePathname()
+const { replace } = useRouter()
 
-    const handleFilter = (filter : Array<string>) => {
-        const params = new URLSearchParams(filterParams)
-        if (filter.length != 0) {
-            params.delete('p')
-            params.set('g', filter.map(g => g.toString()).join(' '))
-        } else {
-            params.delete('g')
-        }
-        replace(`${pathName}?${params.toString()}`)
-    }
-
-    function collectingGenre(){
-        let genreArray : Array<string> = []
-        bookData.map(book => {
-            book.genre.map(genre => {
-                if (!genreArray.includes(genre)) {
-                    genreArray.push(genre)
-                }
-            })
-        })
-        return genreArray
-    }
-
-    const genreArray = collectingGenre().sort()
-
-    function inputFilter() {
-        const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
-        const selectedGenre = Array.from(checkboxes).map(cb => (cb as HTMLInputElement).value);
-
-        handleFilter(selectedGenre);
-        document.getElementById("Genres")?.classList.toggle("hidden");
-    }
-
-    function clearFilter() {
-        const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
-        checkboxes.forEach(cb => (cb as HTMLInputElement).checked = false);
-        const params = new URLSearchParams(filterParams)
+const handleFilter = (filter : Array<string>) => {
+    const params = new URLSearchParams(filterParams)
+    if (filter.length != 0) {
+        params.delete('p')
+        params.set('g', filter.map(g => g.toString()).join(' '))
+    } else {
         params.delete('g')
-        replace(`${pathName}?${params.toString()}`)
-        document.getElementById("Genres")?.classList.toggle("hidden");
     }
+    replace(`${pathName}?${params.toString()}`)
+}
 
-    function showFilter(){
-        document.getElementById("Genres")?.classList.toggle("hidden");
-    }
+function inputFilter() {
+    const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
+    const selectedGenre = Array.from(checkboxes).map(cb => (cb as HTMLInputElement).value);
 
-    let genrePlaceholder = 'Genre'
-    if (filterParams.get('g')) {
-        genrePlaceholder = filterParams.get('g')?.toString().split(' ').map(g => g.charAt(0).toUpperCase() + g.slice(1)).join(', ') || 'Genre'
-    }
+    handleFilter(selectedGenre);
+    document.getElementById("Genres")?.classList.toggle("hidden");
+}
+
+function clearFilter() {
+    const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
+    checkboxes.forEach(cb => (cb as HTMLInputElement).checked = false);
+    const params = new URLSearchParams(filterParams)
+    params.delete('g')
+    replace(`${pathName}?${params.toString()}`)
+    document.getElementById("Genres")?.classList.toggle("hidden");
+}
+
+function showFilter(){
+    document.getElementById("Genres")?.classList.toggle("hidden");
+}
+
+let genrePlaceholder = 'Genre'
+if (filterParams.get('g')) {
+    genrePlaceholder = filterParams.get('g')?.toString().split(' ').map(g => g.charAt(0).toUpperCase() + g.slice(1)).join(', ') || 'Genre'
+}
+
 
     return <>
     <m.div className="text-xs md:text-sm relative" layout>
@@ -72,8 +59,7 @@ export default function Filter(){
         <div id="Genres" className="hidden absolute z-55 w-full">
             <form className="bg-slate-900 grid-cols-2 p-2 grid gap-1">
         {genreArray.map((g, i) => {
-            return <label key={i}><input type="checkbox" name="genre" id="genre" value={g.toLowerCase()}/> {g} <span className="bg-slate-600 rounded-sm px-1">{`${bookData.filter(book => book.genre.includes(g)).length
-            }`}</span></label>
+            return <label key={i}><input type="checkbox" name="genre" id="genre" value={g.toLowerCase()}/> {g} </label>
         })}
         </form>
         <div className="w-full flex font-semibold">

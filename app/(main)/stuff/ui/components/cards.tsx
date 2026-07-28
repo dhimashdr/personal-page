@@ -1,4 +1,6 @@
+import { urlFor } from '@/sanity/lib/image';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 interface StuffInfo{
     id: string,
@@ -39,4 +41,41 @@ export default function Cards({stuff} : Stuff){
             </div>
         </div>
     </div>
+}
+
+interface StuffData{
+    title: string,
+    subtitle: string,
+    url: string,
+    publishDate: string,
+    cover: any,
+    techStack: Array<string>
+}
+
+export function StuffCard({stuff} : {stuff : StuffData}){
+    return <Link href={stuff.url} className="grid grid-cols-1 w-full rounded-lg overflow-hidden h-fit group">
+        <div className="bg-cover bg-top h-30 scale-100 group-hover:scale-105 transition-all duration-200 ease-in-out z-40" style={{backgroundImage: `url(${urlFor(stuff.cover).url()})`}}>
+        </div>
+        <div className="h-fit my-auto grid grid-cols-2 p-5 bg-linear-to-r from-slate-900 to-sky-950 z-40">
+            <div>
+                <h1 className="font-bold text-lg">{stuff.title}</h1>
+                <p className="font-light text-[0.5rem] lg:text-xs text-gray-400">{stuff.subtitle}</p>
+            </div>
+            <div className="ml-auto grid grid-cols-1">
+                <div className="text-right text-[0.5rem] lg:text-xs text-gray-400 flex items-center-safe">
+                    {stuff.publishDate}
+                </div>
+                <div className="flex items-end-safe justify-end-safe">
+                    <div className="flex gap-1">
+                    {stuff.techStack.map((tech, index) => {
+                    return <Icon 
+                            key={index} 
+                            icon={`logos:${tech}`}
+                            className='w-3 h-3 lg:w-5 lg:h-5'/>
+                    })}
+                </div>
+                </div>
+            </div>
+        </div>
+    </Link>
 }

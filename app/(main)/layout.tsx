@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import NavLinks from "../ui/components/navlinks";
-import { inter, italianno, ibm_plex_sans } from "@/app/ui/fonts";
+import { inter } from "@/app/ui/fonts";
+import { SanityLive } from "@/sanity/lib/live";
 
 import type { Metadata } from "next";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           <NavLinks />
           <div className="lg:pl-24">
             {children}
+            <SanityLive/>
           </div>
         </div>
       </body>

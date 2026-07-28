@@ -1,4 +1,3 @@
-import { inter } from "@/app/ui/fonts";
 import { Icon } from '@iconify/react';
 
 interface StatusInfo{

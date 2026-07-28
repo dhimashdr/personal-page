@@ -2,6 +2,8 @@ import Image from "next/image";
 import { inter } from "@/app/ui/fonts";
 import { StarIcon } from "@heroicons/react/16/solid";
 import Status from "./status";
+import { urlFor } from "@/sanity/lib/image";
+
 
 interface BooksInfo{
     title: string,
@@ -20,7 +22,7 @@ interface Books{
     buku: BooksInfo
 };
 
-export default async function Cards({buku} : Books){
+export default function Cards({buku} : Books){
     return <div className="bg-linear-to-b from-red-950/40 to-cyan-950/40 flex rounded-sm md:rounded-md h-40 md:h-48 items-center-safe">
         <div className="flex-1/3 relative h-full w-full">
         <Status status={buku?.status}/>
@@ -33,6 +35,46 @@ export default async function Cards({buku} : Books){
             <div className="flex items-center-safe">
                 <div className="flex gap-1 flex-wrap flex-2/3 text-[0.5rem] md:text-[0.625rem] pb-1">
                     {buku?.genre.map((g, i) => {
+                    return <div key={i} className="bg-slate-700 w-fit px-1 rounded-xs font-medium">{g}</div>
+                    })}
+                </div>
+                <div className="flex-1/3 text-sm h-fit">
+                    <p className="text-right text-[0.5rem] md:text-xs"><span className="font-bold text-xs md:text-lg">{buku?.rate === 0 ? "-" : buku?.rate}</span>/5
+                    <StarIcon className="text-yellow-500 w-2 lg:w-5 align-text-bottom inline-block"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+interface BookData{
+    title: string,
+    cover: any,
+    author: string,
+    blurb: string,
+    isbn: string,
+    pages: number,
+    quote: string,
+    rate: number,
+    genres: Array<string>,
+    review: any,
+    status: string
+}
+
+export function BookCard({buku} : {buku : BookData}){
+    return <div className="bg-linear-to-b from-red-950/40 to-cyan-950/40 flex rounded-sm md:rounded-md h-40 md:h-48 items-center-safe">
+        <div className="flex-1/3 relative h-full w-full">
+        <Status status={buku?.status}/>
+            <Image key={buku?.isbn} alt={buku?.title ?? "notfound"} src={urlFor(buku.cover).url()} fill loading="eager" sizes="1" className="rounded-r-sm rounded-bl-sm lg:rounded-r-md lg:rounded-bl-md w-fit object-cover object-center" draggable='false'></Image>
+        </div>
+        <div className={`${inter.className} mx-auto p-4 flex-2/3`}>
+            <p className="font-black text-sm md:text-[1rem] leading-5">{buku?.title}</p>
+            <p className="text-[0.5rem] md:text-[0.6rem] mb-2 md:mb-4 mt-1"><span className="text-red-200">{buku?.author}</span> | <span className="text-blue-200">{buku?.pages} hlm</span></p>
+            <p className="text-[0.5rem] md:text-[0.6rem] mb-2 md:mb-4">{buku?.blurb}</p>
+            <div className="flex items-center-safe">
+                <div className="flex gap-1 flex-wrap flex-2/3 text-[0.5rem] md:text-[0.625rem] pb-1">
+                    {buku?.genres.map((g, i) => {
                     return <div key={i} className="bg-slate-700 w-fit px-1 rounded-xs font-medium">{g}</div>
                     })}
                 </div>
