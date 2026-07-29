@@ -4,6 +4,7 @@ import { inter } from "@/app/ui/fonts";
 import { SanityLive } from "@/sanity/lib/live";
 
 import type { Metadata } from "next";
+import { draftMode } from "next/headers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dhimashdr.vercel.app"),
@@ -14,11 +15,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const draft = await draftMode();
+  const isEnabled = draft.isEnabled;
+
   return (
     <html lang="en">
       <body
@@ -28,7 +32,13 @@ export default function RootLayout({
           <NavLinks />
           <div className="lg:pl-24">
             {children}
-            <SanityLive/>
+            {isEnabled && <SanityLive />}
+        {isEnabled && (
+          <div className="fixed bottom-0 right-0 z-50 bg-red-500 text-white p-2 text-sm">
+            Draft Mode Active
+            <a href="/api/disable-draft" className="ml-2 underline font-bold">Disable</a>
+          </div>
+        )}
           </div>
         </div>
       </body>

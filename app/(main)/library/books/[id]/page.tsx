@@ -70,7 +70,7 @@ export default async function DetailBuku({ params }: PageProps){
     
     return <>
     {book ?
-        <div className="w-full">
+        <div className="w-full min-h-screen">
             <section className="bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${urlFor(book[0].cover).url()})`
             }}>
                 <div className={`bg-linear-to-t from-background to-background/50 backdrop-blur-sm w-full px-6 lg:px-18 py-8 border-b-2 ${book[0].status == 'Finished' ? 'border-green-600' : (book[0].status == 'DNF' ? 'border-red-600' : 'border-orange-400')}`}>

@@ -40,7 +40,7 @@ export default async function PostPage({params} : PageProps){
     const { id } = await params
     const data = await getPost(id)
 
-    return <div className="w-full">
+    return <><div className="w-full min-h-screen">
         <div className="bg-cover w-full min-h-[20vh] lg:min-h-[40vh] bg-center" style={{backgroundImage: `url(${urlFor(data[0].cover).url()})`}}></div>
         <div className="w-full px-6 lg:px-12 py-5 lg:py-10">
             <div className="pb-5 lg:pb-10">
@@ -51,9 +51,7 @@ export default async function PostPage({params} : PageProps){
                 <PortableText value={data[0].content}/>
             </div>
         </div>
-        <br />
-        <hr />
-    </div>
+    </div><br /><hr /></>
 }
 
 
