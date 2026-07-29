@@ -32,13 +32,7 @@ export default async function RootLayout({
           <NavLinks />
           <div className="lg:pl-24">
             {children}
-            {isEnabled && <SanityLive />}
-        {isEnabled && (
-          <div className="fixed bottom-0 right-0 z-50 bg-red-500 text-white p-2 text-sm">
-            Draft Mode Active
-            <a href="/api/disable-draft" className="ml-2 underline font-bold">Disable</a>
-          </div>
-        )}
+            <SanityLive/>
           </div>
         </div>
       </body>
