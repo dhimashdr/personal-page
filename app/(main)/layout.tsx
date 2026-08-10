@@ -1,10 +1,10 @@
 import "@/app/globals.css";
 import NavLinks from "../ui/components/navlinks";
 import { inter } from "@/app/ui/fonts";
-import { SanityLive } from "@/sanity/lib/live";
+// import { SanityLive } from "@/sanity/lib/live";
 
 import type { Metadata } from "next";
-import { draftMode } from "next/headers";
+// import { draftMode } from "next/headers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dhimashdr.vercel.app"),
@@ -20,8 +20,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const draft = await draftMode();
-  const isEnabled = draft.isEnabled;
+  // const draft = await draftMode();
+  // const isEnabled = draft.isEnabled;
 
   return (
     <html lang="en">
@@ -32,7 +32,6 @@ export default async function RootLayout({
           <NavLinks />
           <div className="lg:pl-24">
             {children}
-            <SanityLive/>
           </div>
         </div>
       </body>

@@ -4,10 +4,10 @@ import { inter } from "@/app/ui/fonts";
 import Cards from "@/app/(main)/library/ui/components/cards";
 import NotFound from "@/app/not-found";
 import { Metadata } from 'next';
-import { sanityFetch } from "@/sanity/lib/live";
 import { urlFor } from "@/sanity/lib/image";
 import { BookCard } from "@/app/(main)/library/ui/components/cards";
 import { PortableText } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
 interface PageProps {
   params: Promise<{ id: string }>
@@ -44,7 +44,7 @@ async function getBook(isbn: string){
                             genres,
                             review,
                             status}`
-    const {data : result} = await sanityFetch({query: QUERY})
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<BookData>
 }

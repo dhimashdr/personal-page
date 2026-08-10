@@ -1,7 +1,7 @@
 import { Metadata } from "next"
-import { sanityFetch } from "@/sanity/lib/live"
 import { urlFor } from "@/sanity/lib/image"
 import { PortableText } from "next-sanity"
+import { client } from "@/sanity/lib/client"
 
 interface PageProps{
     params: Promise<{id: string}>
@@ -31,7 +31,7 @@ interface PostData{
 
 async function getPost(id: string){
     const QUERY = `*[_type == 'posts' && slug.current == "${id}"]{slug, subtitle, title, cover, content, _createdAt}`
-    const {data : result} = await sanityFetch({query: QUERY})
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<PostData>
 }

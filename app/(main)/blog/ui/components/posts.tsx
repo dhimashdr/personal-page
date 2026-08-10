@@ -1,5 +1,5 @@
-import { sanityFetch } from "@/sanity/lib/live"
 import { PostCard } from "./cards"
+import { client } from "@/sanity/lib/client"
 
 interface Posts{
     title: string,
@@ -11,7 +11,7 @@ interface Posts{
 
 async function getPosts(){
     const QUERY = "*[_type == 'posts']{title, subtitle, cover, slug, _createdAt}"
-    const { data: result } = await sanityFetch({query: QUERY})
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<Posts>
 }

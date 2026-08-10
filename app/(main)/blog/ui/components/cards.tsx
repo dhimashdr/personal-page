@@ -1,4 +1,3 @@
-import { sanityFetch } from "@/sanity/lib/live"
 import { urlFor } from "@/sanity/lib/image"
 import Link from "next/link"
 

@@ -1,6 +1,7 @@
-import { sanityFetch } from "@/sanity/lib/live";
+// import { sanityFetch } from "@/sanity/lib/live";
 import { BookCard } from "./cards";
 import Link from "next/link";
+import { client } from "@/sanity/lib/client";
 
 interface BookData{
     title: string,
@@ -31,7 +32,7 @@ async function getBooks(start : number, filter: string){
                             review,
                             status
                         }`
-    const { data : result } = await sanityFetch({query: QUERY})
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<BookData>
 }
@@ -61,7 +62,7 @@ export function AllBooksSkeleton(){
 
 export async function collectingGenre(){
     const QUERY = `array::unique(*[_type == "books" && defined(genres)].genres[])`
-    const {data : genre} = await sanityFetch({query: QUERY})
+    const genre = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return genre as Array<string>
 }

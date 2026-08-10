@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { sanityFetch } from "@/sanity/lib/live"
 import { urlFor } from "@/sanity/lib/image"
+import { client } from "@/sanity/lib/client"
 
 interface BookInfo{
     title: string,
@@ -12,7 +12,7 @@ interface BookInfo{
 
 async function getOngoingBooks(){
     const QUERY = `*[_type == "books" && status == "Ongoing"]{title, author, pages, cover, isbn}`
-    const {data : result} = await sanityFetch({query: QUERY})
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<BookInfo>
 }

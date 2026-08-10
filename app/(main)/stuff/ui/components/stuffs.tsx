@@ -1,4 +1,5 @@
-import { sanityFetch } from "@/sanity/lib/live";
+// import { sanityFetch } from "@/sanity/lib/live";
+import { client } from "../../../../../sanity/lib/client";
 import { StuffCard } from "./cards";
 
 interface StuffData{
@@ -12,7 +13,7 @@ interface StuffData{
 
 async function getStuffs(){
     const QUERY = `*[_type == 'stuffs']{title, subtitle, url, publishDate, cover, techStack}`
-    const {data : result} = await sanityFetch({query: QUERY})
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<StuffData>
 }

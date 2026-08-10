@@ -28,7 +28,7 @@ export default function Cards({stuff} : Stuff){
                 <div className="text-right text-[0.5rem] lg:text-xs text-gray-400 flex items-center-safe">
                     {stuff.createdAt}
                 </div>
-                <div className="flex items-end-safe justify-end-safe">
+                {/* <div className="flex items-end-safe justify-end-safe">
                     <div className="flex gap-1">
                     {stuff.techStack.map((tech, index) => {
                     return <Icon 
@@ -37,7 +37,7 @@ export default function Cards({stuff} : Stuff){
                             className='w-3 h-3 lg:w-5 lg:h-5'/>
                     })}
                 </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@ export function StuffCard({stuff} : {stuff : StuffData}){
                 <div className="text-right text-[0.5rem] lg:text-xs text-gray-400 flex items-center-safe">
                     {stuff.publishDate}
                 </div>
-                <div className="flex items-end-safe justify-end-safe">
+                {/* <div className="flex items-end-safe justify-end-safe">
                     <div className="flex gap-1">
                     {stuff.techStack.map((tech, index) => {
                     return <Icon 
@@ -74,7 +74,7 @@ export function StuffCard({stuff} : {stuff : StuffData}){
                             className='w-3 h-3 lg:w-5 lg:h-5'/>
                     })}
                 </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </Link>

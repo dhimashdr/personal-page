@@ -4,13 +4,15 @@
 import Search from "./ui/components/search";
 import Filter from "./ui/components/filter";
 import BookPagination from "./ui/components/pagination";
-import { sanityFetch } from "@/sanity/lib/live";
+// import { sanityFetch } from "@/sanity/lib/live";
+import { client } from "../../../sanity/lib/client";
 import { AllBooks, AllBooksSkeleton } from "./ui/components/books";
 import { collectingGenre } from "./ui/components/books";
 import { Suspense } from "react";
 
 async function getTotalBooks(){
-    const { data : result } = await sanityFetch({query: 'count(*[_type == "books"])'})
+    const QUERY = 'count(*[_type == "books"])'
+    const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as number
 }
