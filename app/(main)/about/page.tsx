@@ -80,6 +80,7 @@ export default function About(){
                         <DocCards url='/documents/cv-dimas.pdf' title='Curriculum Vitae'/>
                         <DocCards url='/documents/portfolio-design-2026-dimas.pdf' title='Design Portfolio'/>
                         <DocCards url='/documents/portfolio-uiux-2026-dimas.pdf' title='UI/UX Portfolio'/>
+                        <DocCards url='/documents/portfolio-da-2026-dimas.pdf' title='Data Analyst Portfolio'/>
                     </div>
                 </section>
                 <hr />
