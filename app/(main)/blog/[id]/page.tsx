@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { urlFor } from "@/sanity/lib/image"
 import { PortableText } from "next-sanity"
 import { client } from "@/sanity/lib/client"
+import { myPortableTextComponents } from "../ui/components/portablecomponents"
 
 interface PageProps{
     params: Promise<{id: string}>
@@ -48,7 +49,7 @@ export default async function PostPage({params} : PageProps){
                 <p className="font-light text-xs md:text-sm text-gray-400">{data[0]._createdAt.split('T')[0]} </p>
             </div>
             <div className="text-xs md:text-sm">
-                <PortableText value={data[0].content}/>
+                <PortableText value={data[0].content} components={myPortableTextComponents}/>
             </div>
         </div>
     </div><br /><hr /></>
