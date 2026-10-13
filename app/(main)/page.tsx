@@ -4,8 +4,11 @@ import Header from "../ui/components/header"
 import Footer from "../ui/components/footer"
 import { OngoingBooks } from "../ui/components/ongoingBookCards"
 import { SlideUp, Hello } from "../ui/components/slideUp"
+import Opportunities, { ReachMe } from "../ui/components/opportunities"
 
 export default function Home(){
+  const today = new Date().toLocaleDateString('en-GB'); 
+
   return <div className="w-full  min-h-screen relative">
     <Header title="" desc="nice to meet you!"/>
     <div className="w-full relative overflow-hidden">
@@ -26,6 +29,16 @@ export default function Home(){
         </div>
       </div>
     </div>
+    <hr />
+    
+    <SlideUp>
+      <div className="my-5 px-6 lg:px-16">
+        <h1 className="font-bold mb-5 text-xl lg:text-3xl text-lime-200">I'm open for opportunities <span className="text-xs font-light text-foreground">(last updated : {today})</span></h1>
+        <Opportunities></Opportunities>
+        <br />
+        <ReachMe></ReachMe>
+      </div>
+    </SlideUp>
     <hr />
     <SlideUp>
       <div className="my-5 px-6 lg:px-16">
