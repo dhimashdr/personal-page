@@ -33,9 +33,9 @@ const opps = [
 export default function Opportunities(){
     return <div className="flex flex-col gap-8">
         {opps.map((e, i) => {
-            return <div key={i} className="flex flex-col bg-linear-90 from-foreground/16 to-foreground/8 p-4 md:p-8">
-            <h1 className="font-bold text-2xl">{e.job}</h1>
-            <p className="text-sm">{e.desc}</p>
+            return <div key={i} className="flex flex-col bg-linear-90 from-foreground/16 to-foreground/8 p-4 md:p-8 gap-1">
+            <h1 className="font-bold text-lg md:text-2xl">{e.job}</h1>
+            <p className="text-xs md:text-sm">{e.desc}</p>
             <br />
             <p className="text-xs font-light text-lime-400">pengalaman :</p>
             {e.exp.map((f, i) => {
@@ -48,7 +48,7 @@ export default function Opportunities(){
 
 export function ReachMe(){
     return <div>
-        <p className="text-sm text-center">
+        <p className="text-xs md:text-sm text-center">
             If you are interested, you can reach me through <span className="font-bold text-lime-400">dhimashdr@gmail.com</span> or WhatsApp <a href="https://wa.me/6285812780604" className="font-bold text-lime-400">(62 858 1278 0604)</a>
         </p>
     </div>
