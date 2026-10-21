@@ -1,3 +1,4 @@
+import { urlFor } from '@/sanity/lib/image';
 import { PortableTextComponents } from '@portabletext/react';
 
 export const myPortableTextComponents: PortableTextComponents = {
@@ -9,7 +10,7 @@ export const myPortableTextComponents: PortableTextComponents = {
     h4: ({ children }) => <h4 className="text-xl font-bold mt-5 mb-2">{children}</h4>,
     h5: ({ children }) => <h5 className="text-lg font-bold mt-4 mb-2">{children}</h5>,
     h6: ({ children }) => <h6 className="text-base font-bold mt-4 mb-2">{children}</h6>,
-    normal: ({ children }) => <p className="my-3 leading-relaxed">{children}</p>,
+    normal: ({ children }) => <p className="my-5 leading-relaxed text-pre">{children}</p>,
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 pl-4 py-1 italic my-5 rounded-r">
         {children}
@@ -61,13 +62,13 @@ export const myPortableTextComponents: PortableTextComponents = {
     image: ({ value }) => (
       <div className="my-6">
         <img 
-          src={value?.imageUrl} 
+          src={value.asset ? urlFor(value).width(720).format('webp').quality(100).url() : '/images/not-found.png'} 
           alt={value?.alt || 'Image'} 
-          className="w-full max-w-2xl rounded-lg shadow-sm"
+          className="w-full md:w-1/2 mx-auto rounded-lg shadow-sm"
         />
         {/* Render caption jika ada */}
-        {value?.caption && (
-          <p className="text-sm text-center mt-2">{value.caption}</p>
+        {value?.alt && (
+          <p className="text-xs text-center mt-2 text-neutral-400 italic">{value.alt}</p>
         )}
       </div>
     ),

@@ -10,7 +10,7 @@ interface Posts{
 }
 
 async function getPosts(){
-    const QUERY = "*[_type == 'posts']{title, subtitle, cover, slug, _createdAt}"
+    const QUERY = "*[_type == 'posts'] | order(_createdAt desc) {title, subtitle, cover, slug, _createdAt}"
     const result = await client.fetch(QUERY, {}, {next: {revalidate: 60}})
 
     return result as Array<Posts>

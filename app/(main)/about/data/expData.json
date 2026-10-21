@@ -14,7 +14,7 @@
             },
             {
                 "pos": "Sub-coordinator of Digital Kreasi",
-                "skill": ["figma", "tailwindcss"],
+                "skill": ["figma", "tailwindcss", "html5"],
                 "dateStart": "Mar 2024",
                 "dateEnd": "Dec 2024",
                 "detail": ["Working on LMNas 35 UGM webpage", "Helping coordinator and other staffs"]
@@ -29,7 +29,7 @@
         "breakdown": [
             {
                 "pos": "Machine Learning Cohort",
-                "skill": ["python", "tensorflow"],
+                "skill": ["python", "tensorflow", "jupyter-wordmark", "googlecolab"],
                 "dateStart": "Feb 2024",
                 "dateEnd": "Jun 2024",
                 "detail": ["Studying about machine learning through online courses (Coursera)", "Made machine learning model using TensorFlow with other cohorts for the final project"]
@@ -41,21 +41,37 @@
         "name": "Department of Mathematics UGM",
         "subname": "",
         "theme": "#0C2C55",
-        "skills": ["python", "latex", "figma", "inkscape"],
+        "skills": ["python", "figma", "inkscape"],
         "breakdown": [
             {
                 "pos": "Laboratory Assistant of Computational Mathematics",
-                "skill": ["python", "latex"],
+                "skill": ["python", "googlecolab", "latex"],
                 "dateStart": "Feb 2024",
                 "dateEnd": "Jun 2024",
                 "detail": ["Preparing weekly learning module and assignment with other assistants", "Teach and guide computational mathematics with implementation in Python language with other assistants", "Grade weekly assignments with other assistants"]
             },
             {
                 "pos": "Graphic Designer",
-                "skill": ["figma", "inkscape"],
+                "skill": ["figma", "inkscape", "canva"],
                 "dateStart": "Aug 2025",
                 "dateEnd": "Oct 2025",
                 "detail": ["Responsible for some of social media designs", "Prepare and help some of department's events"]
+            }
+        ]
+    },
+    {
+        "id": "diverse",
+        "name": "Diverse",
+        "subname": "",
+        "theme": "#464646",
+        "skills": ["nextjs", "sanity", "tailwindcss", "motion"],
+        "breakdown": [
+            {
+                "pos": "Freelance Web Developer",
+                "skill": ["nextjs", "sanity", "tailwindcss", "motion"],
+                "dateStart": "Aug 2026",
+                "dateEnd": "Present",
+                "detail": ["Build websites integrated with headless CMS", "Maintain and ensure websites to perform well"]
             }
         ]
     }

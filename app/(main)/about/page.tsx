@@ -34,7 +34,7 @@ export default function About(){
                     <h1 className="font-bold text-xl lg:text-3xl my-1 text-lime-200 mb-4">
                         Experiences
                     </h1>
-                    <div className="grid grid-cols-1">
+                    <div className="grid grid-cols-1 gap-4">
                         {expData.map((exp, i) => {
                             return <ExpCards key={i} theme={exp.theme} id={exp.id} name={exp.name} subname={exp.subname} breakdown={exp.breakdown}/>
                         })}
@@ -88,7 +88,7 @@ export default function About(){
                     <h1 className="font-bold text-xl lg:text-3xl my-1 text-lime-200 mb-4">
                         Contacts
                     </h1>
-                    <div className="flex flex-wrap gap-4 px-5 md:px-10 lg:px-20 xl:px-40">
+                    <div className="flex flex-wrap gap-4 px-8 md:px-16 lg:px-20 xl:px-40">
                             {socialData.map((social, i) => {
                               return <SocialCards key={i} social={social}/>
                             })}

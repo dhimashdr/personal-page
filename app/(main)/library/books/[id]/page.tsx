@@ -8,6 +8,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { BookCard } from "@/app/(main)/library/ui/components/cards";
 import { PortableText } from "next-sanity";
 import { client } from "@/sanity/lib/client";
+import { myPortableTextComponents } from "../../ui/components/portablecomponents";
 
 interface PageProps {
   params: Promise<{ id: string }>
@@ -89,7 +90,7 @@ export default async function DetailBuku({ params }: PageProps){
             <hr />
             <br />
             <div className="text-xs md:text-sm">
-                <PortableText value={book[0].review}/>
+                <PortableText value={book[0].review} components={myPortableTextComponents}/>
             </div>
             </section>
             <br />
