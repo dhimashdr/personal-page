@@ -14,20 +14,20 @@ const opps = [
             "Staff Media bag. Web Developer, LMNas UGM (2024)"
         ]
     },
-    {
-        job: "Pengolahan Data",
-        desc: "Membuka jasa untuk melakukan uji statistik, uji hipotesis, dan prediksi machine learning. Dilengkapi dengan interpretasi dan visualisasi (jika diperlukan).",
-        exp: [
-            ""
-        ]
-    },
-    {
-        job: "Tutor Matematika",
-        desc: "Membuka posisi sebagai tutor matematika untuk tingkat SMP/SMA. Membantu mengajari materi yang kurang dipahami murid. Bisa trial terlebih dahulu.",
-        exp: [
-            ""
-        ]
-    },
+    // {
+    //     job: "Pengolahan Data",
+    //     desc: "Membuka jasa untuk melakukan uji statistik, uji hipotesis, dan prediksi machine learning. Dilengkapi dengan interpretasi dan visualisasi (jika diperlukan).",
+    //     exp: [
+    //         ""
+    //     ]
+    // },
+    // {
+    //     job: "Tutor Matematika",
+    //     desc: "Membuka posisi sebagai tutor matematika untuk tingkat SMP/SMA. Membantu mengajari materi yang kurang dipahami murid. Bisa trial terlebih dahulu.",
+    //     exp: [
+    //         ""
+    //     ]
+    // },
 ]
 
 export default function Opportunities(){

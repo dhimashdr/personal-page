@@ -33,7 +33,10 @@ export default function Home(){
     
     <SlideUp>
       <div className="my-5 px-6 lg:px-16">
-        <h1 className="font-bold mb-5 text-xl lg:text-3xl text-lime-200">I'm open for opportunities <span className="text-xs font-light text-foreground">(last updated : {today})</span></h1>
+        <div className="mb-5">
+          <h1 className="font-bold text-xl lg:text-3xl text-lime-200">I'm open for opportunities</h1>
+          <p className="text-xs font-light text-foreground">(last updated : {today})</p>
+        </div>
         <Opportunities></Opportunities>
         <br />
         <ReachMe></ReachMe>
